@@ -1,4 +1,4 @@
-export default function Home() {
+function HomePage() {
   return (
     <div>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
@@ -111,3 +111,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default HomePage;
