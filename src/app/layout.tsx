@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import Navbar from '@/components/layout/navbar/navbar';
 import PerfectScrollbar from 'perfect-scrollbar';
 import Footer from '@/components/layout/footer/footer';
+import Transition from './transition';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -87,8 +88,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main
-            className={`
+          <Transition>
+            <main
+              className={`
                 border-forground
                 mx-auto
                 h-full
@@ -97,9 +99,10 @@ export default function RootLayout({
                 px-5
                 py-20
                 `}
-          >
-            {children}
-          </main>
+            >
+              {children}
+            </main>
+          </Transition>
           <Footer />
         </ThemeProvider>
       </body>
