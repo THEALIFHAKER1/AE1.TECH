@@ -92,8 +92,9 @@ export default function RootLayout({
                 mx-auto
                 h-full
                 max-w-screen-2xl
-                border
-            
+                overflow-auto
+                px-5
+                py-20
                 `}
           >
             {children}
