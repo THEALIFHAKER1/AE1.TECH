@@ -18,3 +18,8 @@ export type RouteConfig = {
   label: string;
   icon: React.ElementType;
 };
+
+export type SkillsConfig = {
+  name: string;
+  icon: React.ElementType;
+};
