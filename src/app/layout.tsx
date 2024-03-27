@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import '@/style/globals.css';
 import { ThemeProvider } from '@/components/provider/theme-provider';
 import { siteConfig } from '@/config/site';
+import Navbar from '@/components/layout/navbar/navbar';
+import PerfectScrollbar from 'perfect-scrollbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -83,7 +85,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <main
+            className={`
+                border-forground
+                mx-auto
+                h-full
+                max-w-screen-2xl
+                border
+            
+                `}
+          >
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

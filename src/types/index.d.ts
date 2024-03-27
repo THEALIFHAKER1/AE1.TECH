@@ -1,14 +1,20 @@
 export type SiteConfig = {
-  name: string
-  author: string
-  description: string
-  keywords: Array<string>
+  name: string;
+  author: string;
+  description: string;
+  keywords: Array<string>;
   url: {
-    base: string
-    author: string
-  }
+    base: string;
+    author: string;
+  };
   links: {
-    github: string
-  }
-  ogImage: string
-}
+    github: string;
+  };
+  ogImage: string;
+};
+
+export type RouteConfig = {
+  path: string;
+  label: string;
+  icon: React.ElementType;
+};

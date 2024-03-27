@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "ae1.pro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,8 +22,10 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-perfect-scrollbar": "^1.5.8",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20",
