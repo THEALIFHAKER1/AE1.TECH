@@ -4,9 +4,8 @@ import '@/style/globals.css';
 import { ThemeProvider } from '@/components/provider/theme-provider';
 import { siteConfig } from '@/config/site';
 import Navbar from '@/components/layout/navbar/navbar';
-import PerfectScrollbar from 'perfect-scrollbar';
 import Footer from '@/components/layout/footer/footer';
-import Transition from './transition';
+import WrapperPage from '../components/layout/wrapper/wrapper-page';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -88,7 +87,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <Transition>
+          <WrapperPage>
             <main
               className={`
                 border-forground
@@ -96,13 +95,11 @@ export default function RootLayout({
                 h-full
                 max-w-screen-2xl
                 overflow-auto
-                px-5
-                py-20
                 `}
             >
               {children}
             </main>
-          </Transition>
+          </WrapperPage>
           <Footer />
         </ThemeProvider>
       </body>
