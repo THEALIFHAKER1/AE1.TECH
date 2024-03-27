@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/provider/theme-provider';
 import { siteConfig } from '@/config/site';
 import Navbar from '@/components/layout/navbar/navbar';
 import PerfectScrollbar from 'perfect-scrollbar';
+import Footer from '@/components/layout/footer/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -99,6 +100,7 @@ export default function RootLayout({
           >
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
