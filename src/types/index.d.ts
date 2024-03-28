@@ -1,4 +1,4 @@
-export type SiteConfig = {
+export type SiteTypes = {
   name: string;
   author: string;
   description: string;
@@ -13,24 +13,24 @@ export type SiteConfig = {
   ogImage: string;
 };
 
-export type RouteConfig = {
+export type RouteTypes = {
   path: string;
   label: string;
   icon: React.ElementType;
 };
 
-export type SkillsConfig = {
+export type SkillsTypes = {
   name: string;
   icon: React.ElementType;
 };
 
-export type SosialsConfig = {
+export type SosialsTypes = {
   platform: string;
   link: string;
   icon: React.ElementType;
 };
 
-export type SportlightProjectsConfig = {
+export type SportlightProjectsTypes = {
   projectName: string;
   description: string;
   link: string;

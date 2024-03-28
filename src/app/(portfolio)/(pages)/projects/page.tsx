@@ -1,19 +1,9 @@
 import { HeadingText } from '@/components/custom/heading-text';
-import React, { Suspense } from 'react';
-import ProjectsCarousel from './_components/projects-carousel';
 import { SearchBar } from '@/components/custom/search-bar';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import CollapseComponents from '@/components/custom/collapse-components';
 
-// import AllProjects from './components/AllProjects';
-// import { SearchBar } from '../../../../components/customUi/Search';
-// import { AllProjectsSkeleton } from './components/AllProjectsSkeleton';
-// import ProjectsCarousel from './components/ProjectsCarousel';
+import AllProjects from './_components/all-projects';
+import ProjectsCarousel from './_components/projects-carousel';
 
 export const metadata = {
   title: 'Projects',
@@ -44,9 +34,8 @@ export default function ProjectPage({
           GitHub Repositories
         </HeadingText>
         <SearchBar placeholder={'Search for a repository'} />
-        {/*  <Suspense fallback={<AllProjectsSkeleton />}>
-          <AllProjects filter={searchTerm} />
-        </Suspense> */}
+
+        <AllProjects filter={searchTerm} />
       </div>
     </main>
   );
