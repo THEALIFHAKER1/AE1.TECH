@@ -8,7 +8,19 @@ import {
   SunMedium,
 } from 'lucide-react';
 
-import { FaDatabase, FaJs, FaPhp, FaPython, FaReact } from 'react-icons/fa';
+import {
+  FaDatabase,
+  FaDiscord,
+  FaGithub,
+  FaTwitch,
+  FaJs,
+  FaLinkedinIn,
+  FaPhp,
+  FaPython,
+  FaReact,
+  FaYoutube,
+} from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { BiLogoTailwindCss } from 'react-icons/bi';
 
 export type IconKeys = keyof typeof icons;
@@ -33,6 +45,13 @@ const icons = {
   Js: FaJs,
   Python: FaPython,
   Database: FaDatabase,
+  // social
+  github: FaGithub,
+  linkedin: FaLinkedinIn,
+  twitch: FaTwitch,
+  youtube: FaYoutube,
+  discord: FaDiscord,
+  twitter: FaXTwitter,
 };
 
 export const Icons: IconsType = icons;

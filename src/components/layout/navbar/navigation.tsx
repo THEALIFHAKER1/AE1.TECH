@@ -12,7 +12,7 @@ function Navigation() {
       <li
         key={link.path}
         className={`hover:text-primary ${
-          pathname === link.path ? 'text-primary' : 'text-primary/50'
+          pathname === link.path ? 'text-primary' : 'text-primary/30'
         }`}
       >
         <Link href={link.path} className='hidden md:block'>
