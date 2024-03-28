@@ -11,7 +11,12 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
-export function SearchBar({ placeholder }: { placeholder: string }) {
+
+interface SearchBarProps {
+  placeholder: string;
+}
+
+export function SearchBar({ placeholder }: SearchBarProps) {
   const SearchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -30,6 +35,15 @@ export function SearchBar({ placeholder }: { placeholder: string }) {
       } else {
         params.delete('Search');
       }
+      replace(`${pathname}?${params.toString()}`);
+    });
+  }
+
+  function clearSearch() {
+    setSearchTerm('');
+    startTransition(() => {
+      const params = new URLSearchParams(SearchParams);
+      params.delete('Search');
       replace(`${pathname}?${params.toString()}`);
     });
   }
@@ -68,6 +82,17 @@ export function SearchBar({ placeholder }: { placeholder: string }) {
         >
           Search
         </Button>
+        {searchTerm && (
+          <Button
+            variant='destructive'
+            onClick={() => {
+              clearSearch();
+            }}
+            className='h-full'
+          >
+            Clear
+          </Button>
+        )}
       </form>
     </Form>
   );

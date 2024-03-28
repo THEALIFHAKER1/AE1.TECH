@@ -2,6 +2,13 @@ import { HeadingText } from '@/components/custom/heading-text';
 import React, { Suspense } from 'react';
 import ProjectsCarousel from './_components/projects-carousel';
 import { SearchBar } from '@/components/custom/search-bar';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
 // import AllProjects from './components/AllProjects';
 // import { SearchBar } from '../../../../components/customUi/Search';
 // import { AllProjectsSkeleton } from './components/AllProjectsSkeleton';
@@ -24,10 +31,18 @@ export default function ProjectPage({
   return (
     <main className='flex flex-col py-8'>
       <div className='space-y-4'>
-        <HeadingText subtext='All of my favorite projects'>
-          Spotlight Projects
-        </HeadingText>
-        <ProjectsCarousel />
+        <Accordion type='single' collapsible defaultValue='item-1'>
+          <AccordionItem value='item-1'>
+            <AccordionTrigger>
+              <HeadingText subtext='All of my favorite projects'>
+                Spotlight Projects
+              </HeadingText>
+            </AccordionTrigger>
+            <AccordionContent>
+              <ProjectsCarousel />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
         <HeadingText subtext='All of my repository on github'>
           GitHub Repositories
         </HeadingText>
