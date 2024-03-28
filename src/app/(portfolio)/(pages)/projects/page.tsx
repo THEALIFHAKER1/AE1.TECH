@@ -1,6 +1,7 @@
 import { HeadingText } from '@/components/custom/heading-text';
 import React, { Suspense } from 'react';
 import ProjectsCarousel from './_components/projects-carousel';
+import { SearchBar } from '@/components/custom/search-bar';
 // import AllProjects from './components/AllProjects';
 // import { SearchBar } from '../../../../components/customUi/Search';
 // import { AllProjectsSkeleton } from './components/AllProjectsSkeleton';
@@ -30,8 +31,8 @@ export default function ProjectPage({
         <HeadingText subtext='All of my repository on github'>
           GitHub Repositories
         </HeadingText>
-        {/* <SearchBar placeholder={"Search for a repository"} />
-        <Suspense fallback={<AllProjectsSkeleton />}>
+        <SearchBar placeholder={'Search for a repository'} />
+        {/*  <Suspense fallback={<AllProjectsSkeleton />}>
           <AllProjects filter={searchTerm} />
         </Suspense> */}
       </div>
