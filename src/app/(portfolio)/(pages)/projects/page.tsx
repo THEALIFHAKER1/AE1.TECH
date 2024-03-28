@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import CollapseComponents from '@/components/custom/collapse-components';
 
 // import AllProjects from './components/AllProjects';
 // import { SearchBar } from '../../../../components/customUi/Search';
@@ -31,18 +32,14 @@ export default function ProjectPage({
   return (
     <main className='flex flex-col py-8'>
       <div className='space-y-4'>
-        <Accordion type='single' collapsible defaultValue='item-1'>
-          <AccordionItem value='item-1'>
-            <AccordionTrigger>
-              <HeadingText subtext='All of my favorite projects'>
-                Spotlight Projects
-              </HeadingText>
-            </AccordionTrigger>
-            <AccordionContent>
-              <ProjectsCarousel />
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        <CollapseComponents
+          nameComponent={
+            <HeadingText subtext='All of my favorite projects'>
+              Spotlight Projects
+            </HeadingText>
+          }
+          contentComponent={<ProjectsCarousel />}
+        />
         <HeadingText subtext='All of my repository on github'>
           GitHub Repositories
         </HeadingText>

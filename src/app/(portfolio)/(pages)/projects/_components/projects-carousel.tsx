@@ -48,7 +48,7 @@ export default function ProjectsCarousel() {
                         {project.projectName}
                       </span>
                       <span className={`text-1xl `}>{project.description}</span>
-                      <div className='mt-5 space-x-2'>
+                      <div className='my-5 space-x-2 md:mb-0'>
                         <Link href={project.link} target='_blank'>
                           <Button variant='outline'>open</Button>
                         </Link>

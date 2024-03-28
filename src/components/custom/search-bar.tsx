@@ -52,7 +52,7 @@ export function SearchBar({ placeholder }: SearchBarProps) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleSearch)}
-        className='flex w-full items-center  justify-center gap-2 rounded-lg border border-input bg-foreground/20 p-3 align-middle'
+        className='flex w-full items-center  justify-center gap-2 rounded-lg border border-input bg-foreground/20 p-3 align-middle saturate-150 filter backdrop-blur-md'
       >
         <FormField
           control={form.control}
