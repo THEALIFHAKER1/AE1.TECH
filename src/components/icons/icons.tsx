@@ -6,6 +6,7 @@ import {
   Moon,
   PencilRuler,
   SunMedium,
+  ExternalLink,
 } from 'lucide-react';
 
 import {
@@ -52,6 +53,8 @@ const icons = {
   youtube: FaYoutube,
   discord: FaDiscord,
   twitter: FaXTwitter,
+  // carousel
+  externalLink: ExternalLink,
 };
 
 export const Icons: IconsType = icons;

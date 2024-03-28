@@ -24,8 +24,16 @@ export type SkillsConfig = {
   icon: React.ElementType;
 };
 
-export type SosialConfig = {
+export type SosialsConfig = {
   platform: string;
   link: string;
   icon: React.ElementType;
+};
+
+export type SportlightProjectsConfig = {
+  projectName: string;
+  description: string;
+  link: string;
+  repo: string;
+  image: string;
 };

@@ -1,8 +1,12 @@
 import { Icons } from '@/components/icons/icons';
-import { SosialConfig } from '@/types';
+import { SosialsConfig } from '@/types';
 
-export const socialConfig: SosialConfig[] = [
-  { platform: 'X', link: 'https://twitter.com/hqasmei', icon: Icons.twitter },
+export const socialsConfig: SosialsConfig[] = [
+  {
+    platform: 'X',
+    link: 'https://twitter.com/thealifhaker1',
+    icon: Icons.twitter,
+  },
   {
     platform: 'GitHub',
     link: 'https://github.com/THEALIFHAKER1',
