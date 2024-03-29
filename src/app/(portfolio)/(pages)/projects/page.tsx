@@ -4,13 +4,15 @@ import CollapseComponents from '@/components/custom/collapse-components';
 
 import AllProjects from './_components/all-projects';
 import ProjectsCarousel from './_components/projects-carousel';
+import { getRepositories } from '@/app/api/github/get-repositories/get-repositories';
+import { RepositoryTypes } from '@/types';
 
 export const metadata = {
   title: 'Projects',
   description: 'All my projects',
 };
 
-export default function ProjectPage({
+export default async function ProjectPage({
   searchParams,
 }: {
   searchParams?: {
@@ -19,6 +21,10 @@ export default function ProjectPage({
 }) {
   const searchTerm = searchParams?.Search || '';
 
+  const repositories = (await getRepositories()) as RepositoryTypes[];
+  const filteredRepositories = repositories.filter((repo) =>
+    repo.name.toLowerCase().includes(searchTerm?.toLowerCase() || '')
+  );
   return (
     <div className='flex flex-col space-y-4'>
       <CollapseComponents
@@ -38,7 +44,7 @@ export default function ProjectPage({
         contentComponent={
           <div className='space-y-4'>
             <SearchBar placeholder={'Search for a repository'} />
-            <AllProjects filter={searchTerm} />
+            <AllProjects repository={filteredRepositories} />
           </div>
         }
       />

@@ -15,7 +15,7 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
   return (
     <Card
       key={repo.id}
-      className='flex flex-col justify-between bg-foreground/20 saturate-150 filter backdrop-blur-md'
+      className='flex h-40 flex-col justify-between bg-foreground/20 saturate-150 filter backdrop-blur-md'
     >
       <CardHeader>
         <div className='flex justify-between'>
@@ -38,7 +38,7 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
             <ExternalLink className='h-4 w-4 text-muted-foreground' />
           </Link>
         </div>
-        <CardDescription className='line-clamp-2 text-sm font-light'>
+        <CardDescription className='line-clamp-2 text-xs font-light'>
           {repo.description}
         </CardDescription>
       </CardHeader>
