@@ -1,7 +1,7 @@
 import { Icons } from '@/components/icons/icons';
-import { SosialsConfig } from '@/types';
+import { SosialsTypes } from '@/types';
 
-export const socialsConfig: SosialsConfig[] = [
+export const socialsConfig: SosialsTypes[] = [
   {
     platform: 'X',
     link: 'https://twitter.com/thealifhaker1',

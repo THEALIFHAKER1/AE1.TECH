@@ -1,7 +1,7 @@
 import { Icons } from '@/components/icons/icons';
-import { SkillsConfig } from '@/types';
+import { SkillsTypes } from '@/types';
 
-export const skillsConfig: SkillsConfig[] = [
+export const skillsConfig: SkillsTypes[] = [
   {
     name: 'React',
     icon: Icons.React,

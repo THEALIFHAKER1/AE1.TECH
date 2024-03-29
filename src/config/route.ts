@@ -1,7 +1,7 @@
 import { Icons } from '@/components/icons/icons';
-import { RouteConfig } from '@/types';
+import { RouteTypes } from '@/types';
 
-export const routeConfig: RouteConfig[] = [
+export const routeConfig: RouteTypes[] = [
   {
     path: '/',
     label: 'Home',

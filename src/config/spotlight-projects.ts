@@ -1,7 +1,7 @@
 import { Icons } from '@/components/icons/icons';
-import { SportlightProjectsConfig } from '@/types';
+import { SpotlightProjectsTypes } from '@/types';
 
-export const sportlightProjectsConfig: SportlightProjectsConfig[] = [
+export const spotlightProjectsConfig: SpotlightProjectsTypes[] = [
   {
     projectName: 'Project 1',
     description: 'Description of project 1',

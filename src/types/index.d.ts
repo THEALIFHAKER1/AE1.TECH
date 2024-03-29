@@ -30,7 +30,7 @@ export type SosialsTypes = {
   icon: React.ElementType;
 };
 
-export type SportlightProjectsTypes = {
+export type SpotlightProjectsTypes = {
   projectName: string;
   description: string;
   link: string;

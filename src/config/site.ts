@@ -1,8 +1,8 @@
-import { SiteConfig } from '@/types';
+import { SiteTypes } from '@/types';
 
 import { env } from '@/env.mjs';
 
-export const siteConfig: SiteConfig = {
+export const siteConfig: SiteTypes = {
   name: 'NEXT INITIATE',
   author: 'THEALIFHAKER1',
   description:
