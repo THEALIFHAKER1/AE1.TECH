@@ -14,7 +14,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ProjectsCarousel() {
+export default function SpotlightProjects() {
   return (
     <div className={`relative flex items-center justify-center`}>
       <Carousel

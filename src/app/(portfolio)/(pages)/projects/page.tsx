@@ -2,7 +2,7 @@ import { HeadingText } from '@/components/custom/heading-text';
 import CollapseComponents from '@/components/custom/collapse-components';
 
 import AllProjects from './_components/all-projects';
-import ProjectsCarousel from './_components/projects-carousel';
+import ProjectsCarousel from './_components/spotlight-projects';
 import { getRepositories } from '@/app/api/github/get-repositories/get-repositories';
 import { RepositoryTypes } from '@/types';
 
