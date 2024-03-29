@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
-import { sportlightProjectsConfig } from '@/config/spotlight-projects';
+import { spotlightProjectsConfig } from '@/config/spotlight-projects';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,7 +30,7 @@ export default function ProjectsCarousel() {
         }}
       >
         <CarouselContent className={`-ml-1`}>
-          {sportlightProjectsConfig.map((project, idx) => (
+          {spotlightProjectsConfig.map((project, idx) => (
             <CarouselItem key={idx} className={`pl-1  md:basis-1/3`}>
               <div className={`p-1`}>
                 <Card className={`h-60`}>

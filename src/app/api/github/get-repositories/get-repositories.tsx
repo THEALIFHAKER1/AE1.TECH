@@ -1,8 +1,9 @@
 import { env } from '@/env.mjs';
 import { RepositoryTypes } from '@/types';
 
+const token = env.GITHUB_TOKEN;
+
 export async function getRepositories(): Promise<RepositoryTypes[]> {
-  const token = env.GITHUB_TOKEN;
   try {
     const apiUrl = 'https://api.github.com/users/THEALIFHAKER1/repos';
 
@@ -22,8 +23,23 @@ export async function getRepositories(): Promise<RepositoryTypes[]> {
 
     const repositories = await response.json();
 
-    const repositoriesWithLanguages = await Promise.all(
-      repositories.map(async (repo: RepositoryTypes) => {
+    let repositoriesWithLanguages: RepositoryTypes[] = [];
+
+    repositoriesWithLanguages = await getRepositoryLanguages(repositories);
+
+    return repositoriesWithLanguages;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+export async function getRepositoryLanguages(
+  repositoryName: string
+): Promise<RepositoryTypes[]> {
+  const repositoriesWithLanguages = await Promise.all(
+    (Array.isArray(repositoryName) ? repositoryName : []).map(
+      async (repo: RepositoryTypes) => {
         const languagesUrl = repo.languages_url;
 
         const languagesResponse = await fetch(languagesUrl, {
@@ -38,13 +54,9 @@ export async function getRepositories(): Promise<RepositoryTypes[]> {
 
         const languages = await languagesResponse.json();
         return { ...repo, languages };
-      })
-    );
+      }
+    )
+  );
 
-    return repositoriesWithLanguages;
-  } catch (error) {
-    // Handle the error here
-    console.error(error);
-    throw error;
-  }
+  return repositoriesWithLanguages;
 }
