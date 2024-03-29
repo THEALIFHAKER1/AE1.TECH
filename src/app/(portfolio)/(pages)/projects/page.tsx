@@ -1,5 +1,4 @@
 import { HeadingText } from '@/components/custom/heading-text';
-import { SearchBar } from '@/components/custom/search-bar';
 import CollapseComponents from '@/components/custom/collapse-components';
 
 import AllProjects from './_components/all-projects';
@@ -41,12 +40,7 @@ export default async function ProjectPage({
             GitHub Repositories
           </HeadingText>
         }
-        contentComponent={
-          <div className='space-y-4'>
-            <SearchBar placeholder={'Search for a repository'} />
-            <AllProjects repository={filteredRepositories} />
-          </div>
-        }
+        contentComponent={<AllProjects repository={filteredRepositories} />}
       />
     </div>
   );

@@ -3,6 +3,7 @@ import { RepositoryTypes } from '@/types';
 import CardProject from './card-project';
 import { PaginationSection } from '../../../../../components/custom/pagination-section';
 import { useState } from 'react';
+import { SearchBar } from '@/components/custom/search-bar';
 
 export default function AllProjects({
   repository,
@@ -16,7 +17,8 @@ export default function AllProjects({
   const currentPosts = repository.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <>
+    <div className='space-y-4'>
+      <SearchBar placeholder={'Search for a repository'} />
       <div className='grid w-full grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
         {currentPosts.map((repo) => (
           <CardProject repo={repo} key={repo.id} />
@@ -28,6 +30,6 @@ export default function AllProjects({
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-    </>
+    </div>
   );
 }
