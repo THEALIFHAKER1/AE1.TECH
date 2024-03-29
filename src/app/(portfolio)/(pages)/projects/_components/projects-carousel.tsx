@@ -35,13 +35,13 @@ export default function ProjectsCarousel() {
               <div className={`p-1`}>
                 <Card className={`h-60`}>
                   <CardContent
-                    className=' flex h-full justify-end rounded-lg  p-6'
-                    style={{
-                      backgroundImage: `url(${project.image})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
+                    className=' flex h-full justify-end rounded-lg bg-foreground/20 bg-cover bg-center bg-no-repeat p-6 backdrop-blur-md'
+                    // style={{
+                    //   backgroundImage: `url(${project.image})`,
+                    //   backgroundRepeat: 'no-repeat',
+                    //   backgroundSize: 'cover',
+                    //   backgroundPosition: 'center',
+                    // }}
                   >
                     <CarouselItem className='flex flex-col justify-end '>
                       <span className={`text-2xl font-bold `}>
