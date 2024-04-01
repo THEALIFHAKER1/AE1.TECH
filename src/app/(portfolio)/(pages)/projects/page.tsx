@@ -25,7 +25,7 @@ export default async function ProjectPage({
     repo.name.toLowerCase().includes(searchTerm?.toLowerCase() || '')
   );
   return (
-    <div className='flex flex-col space-y-4'>
+    <>
       <CollapseComponents
         nameComponent={
           <HeadingText subtext='All of my favorite projects'>
@@ -42,6 +42,6 @@ export default async function ProjectPage({
         }
         contentComponent={<AllProjects repository={filteredRepositories} />}
       />
-    </div>
+    </>
   );
 }

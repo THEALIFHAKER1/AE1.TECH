@@ -94,6 +94,7 @@ export default function RootLayout({
                 mx-auto
                 h-full
                 max-w-screen-2xl
+                space-y-4
                 overflow-auto
                 `}
             >

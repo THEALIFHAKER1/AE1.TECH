@@ -1,14 +1,14 @@
-"use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
-import { usePathname as Pathname } from "next/navigation";
-import LOGO from "@/assets/logo.svg";
-import Image from "next/image";
+'use client';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import Typewriter from 'typewriter-effect';
+import { usePathname as Pathname } from 'next/navigation';
+import LOGO from '@/assets/logo.svg';
+import Image from 'next/image';
 
 function Logo() {
   const pathname = Pathname();
-  const [typewriterStrings, setTypewriterStrings] = useState("/");
+  const [typewriterStrings, setTypewriterStrings] = useState('/');
 
   useEffect(() => {
     setTypewriterStrings(pathname);
@@ -16,21 +16,21 @@ function Logo() {
 
   return (
     <>
-      <div className="flex space-x-4">
-        <Link href="guestbook">
+      <div className='flex space-x-4'>
+        <Link href='guestbook'>
           <Image
             priority
             src={LOGO}
-            alt="logo"
+            alt='logo'
             width={50}
             height={50}
-            className="filter grayscale dark:filter-none min-w-[50px] min-h-[50px]"
+            className='min-h-[50px] min-w-[50px] grayscale filter dark:filter-none'
           />
         </Link>
-        <div className="hidden md:block">
+        <div className='hidden md:block'>
           <p>THEALIFHAKER1( );</p>
-          <Link href="/" className="flex">
-            {`~`}{" "}
+          <Link href='/' className='flex'>
+            {`~`}{' '}
             <Typewriter
               options={{
                 strings: typewriterStrings,
