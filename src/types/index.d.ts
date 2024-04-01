@@ -57,3 +57,8 @@ export type RepositoryTypes = {
 export type LanguagesColorTypes = {
   [key: string]: string;
 };
+
+export type RepositoryOptionTypes = {
+  pagination: boolean;
+  search: boolean;
+};
