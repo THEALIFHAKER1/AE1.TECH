@@ -7,6 +7,7 @@ import {
   PencilRuler,
   SunMedium,
   ExternalLink,
+  ChevronRight,
 } from 'lucide-react';
 
 import {
@@ -34,6 +35,8 @@ const icons = {
   logo: PencilRuler,
   sun: SunMedium,
   moon: Moon,
+  // not found
+  back: ChevronRight,
   // navigation
   home: Home,
   dashboard: LayoutDashboard,
