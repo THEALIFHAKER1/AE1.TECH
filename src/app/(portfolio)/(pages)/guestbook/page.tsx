@@ -1,6 +1,11 @@
 import CollapseComponents from '@/components/custom/collapse-components';
 import { HeadingText } from '@/components/custom/heading-text';
 
+export const metadata = {
+  title: 'Guestbook',
+  description: 'Sign my guestbook and leave your mark.',
+};
+
 export default function DashboardPage() {
   return (
     <>
