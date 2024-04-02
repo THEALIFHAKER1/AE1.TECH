@@ -48,12 +48,16 @@ export default function SpotlightProjects() {
                         {project.projectName}
                       </span>
                       <span className={`text-1xl `}>{project.description}</span>
-                      <div className='my-5 space-x-2 md:mb-0'>
+                      <div className='my-5 flex space-x-2 md:mb-0'>
                         <Link href={project.link} target='_blank'>
-                          <Button variant='outline'>open</Button>
+                          <Button variant='outline' size={'icon'}>
+                            <Icons.externalLink />
+                          </Button>
                         </Link>
                         <Link href={project.repo} target='_blank'>
-                          <Button variant='outline'>repo</Button>
+                          <Button variant='outline' size={'icon'}>
+                            <Icons.github />
+                          </Button>
                         </Link>
                       </div>
                     </CarouselItem>

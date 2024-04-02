@@ -23,7 +23,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { BiLogoTailwindCss } from 'react-icons/bi';
+import { BiLinkExternal, BiLogoTailwindCss } from 'react-icons/bi';
 
 export type IconKeys = keyof typeof icons;
 
@@ -58,7 +58,7 @@ const icons = {
   discord: FaDiscord,
   twitter: FaXTwitter,
   // carousel
-  externalLink: ExternalLink,
+  externalLink: BiLinkExternal,
 };
 
 export const Icons: IconsType = icons;
