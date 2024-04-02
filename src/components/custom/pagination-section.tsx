@@ -83,7 +83,7 @@ export function PaginationSection({
   };
 
   return (
-    <div className='select-none'>
+    <div className=''>
       <Pagination>
         <PaginationContent>
           <PaginationItem>

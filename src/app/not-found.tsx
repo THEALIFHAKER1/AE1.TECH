@@ -13,7 +13,7 @@ const myFont = localFont({
 export default function NotFound() {
   return (
     <>
-      <div className='flex h-full select-none flex-col items-center justify-center text-center'>
+      <div className='flex h-full  flex-col items-center justify-center text-center'>
         <div className='hero-container'>
           <h1 className={` hero glitch layers text-8xl ${myFont.className}`}>
             <span>404</span>

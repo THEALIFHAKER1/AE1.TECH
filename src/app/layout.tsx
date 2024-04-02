@@ -73,8 +73,9 @@ export default function RootLayout({
       <body
         className={`
           h-dvh 
+          select-none 
           bg-background 
-          antialiased 
+          antialiased
           selection:bg-foreground
           selection:text-background
           ${inter.className}
