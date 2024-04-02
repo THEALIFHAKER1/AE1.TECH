@@ -18,6 +18,11 @@ export const routeConfig: RouteTypes[] = [
     icon: Icons.projects,
   },
   {
+    path: '/blog',
+    label: 'Blog',
+    icon: Icons.blog,
+  },
+  {
     path: '/about',
     label: 'About',
     icon: Icons.about,

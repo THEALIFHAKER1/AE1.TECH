@@ -42,6 +42,7 @@ const icons = {
   dashboard: LayoutDashboard,
   projects: FolderGit2,
   about: Info,
+  blog: PencilRuler,
   // skills
   React: FaReact,
   Tailwind: BiLogoTailwindCss,
