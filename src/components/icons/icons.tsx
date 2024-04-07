@@ -8,6 +8,7 @@ import {
   SunMedium,
   ExternalLink,
   ChevronRight,
+  Cake,
 } from 'lucide-react';
 
 import {
@@ -59,6 +60,8 @@ const icons = {
   twitter: FaXTwitter,
   // carousel
   externalLink: BiLinkExternal,
+  // birthday
+  cake: Cake,
 };
 
 export const Icons: IconsType = icons;
