@@ -1,17 +1,15 @@
 'use client';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { timeZoneFormatterConfig } from '@/config/timeZoneFormatter';
 import drawStars from './draw-star';
 import { TimeClock } from './time-clock';
 
 export default function Time() {
   const nightCanvasRef = useRef<HTMLCanvasElement>(null);
-
   const time = TimeClock();
-
   const isNight = time.getHours() >= 20 || time.getHours() < 8;
-  // const isNight = true;
 
   useEffect(() => {
     const canvas = nightCanvasRef.current;
@@ -48,12 +46,7 @@ export default function Time() {
             </CardHeader>
             <CardContent>
               <div className={'whitespace-nowrap text-lg font-bold'}>
-                {time.toLocaleTimeString('en-US', {
-                  timeZone: 'Asia/Kuala_Lumpur',
-                  hour: 'numeric',
-                  minute: 'numeric',
-                  hour12: true,
-                })}
+                {timeZoneFormatterConfig.format(time)}
               </div>
               <p className={`text-xs font-light`}>Malaysia Time (GMT+8)</p>
               {!isNight && (

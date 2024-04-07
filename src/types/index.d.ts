@@ -62,3 +62,9 @@ export type RepositoryOptionTypes = {
   pagination: boolean;
   search: boolean;
 };
+
+export type TimeZoneFormatterTypes = Intl.DateTimeFormat;
+
+export type BirthdayTypes = {
+  date: string;
+};

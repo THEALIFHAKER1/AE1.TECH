@@ -3,6 +3,7 @@ import { HeadingText } from '@/components/custom/heading-text';
 import TwoGrid from './_components/grid/two-grid';
 import Time from './_components/time';
 import SingleGrid from './_components/grid/single-grid';
+import Birthday from './_components/birthday';
 
 export const metadata = {
   title: 'Dashboard',
@@ -20,7 +21,7 @@ export default function DashboardPage() {
         }
         contentComponent={
           <div className='flex grid-flow-dense flex-wrap gap-2'>
-            <TwoGrid TopChildren={<Time />} BottomChildren={<Time />} />
+            <TwoGrid TopChildren={<Time />} BottomChildren={<Birthday />} />
             <SingleGrid />
           </div>
         }
