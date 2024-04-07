@@ -1,7 +1,8 @@
 import CollapseComponents from '@/components/custom/collapse-components';
 import { HeadingText } from '@/components/custom/heading-text';
-import BlankActivity from './_components/blank/blank';
-import LongBlankActivity from './_components/blank/longBlank';
+import TwoGrid from './_components/grid/two-grid';
+import Time from './_components/time';
+import SingleGrid from './_components/grid/single-grid';
 
 export const metadata = {
   title: 'Dashboard',
@@ -19,16 +20,8 @@ export default function DashboardPage() {
         }
         contentComponent={
           <div className='flex grid-flow-dense flex-wrap gap-2'>
-            <BlankActivity />
-            <BlankActivity />
-            <LongBlankActivity />
-            <BlankActivity />
-            <LongBlankActivity />
-            <BlankActivity />
-            <BlankActivity />
-            <LongBlankActivity />
-            <BlankActivity />
-            <LongBlankActivity />
+            <TwoGrid TopChildren={<Time />} BottomChildren={<Time />} />
+            <SingleGrid />
           </div>
         }
       />

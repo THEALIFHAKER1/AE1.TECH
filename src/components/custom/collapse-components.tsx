@@ -17,7 +17,9 @@ export default function CollapseComponents({
   return (
     <Accordion type='single' collapsible defaultValue='item-1'>
       <AccordionItem value='item-1'>
-        <AccordionTrigger>{nameComponent}</AccordionTrigger>
+        <AccordionTrigger className='whitespace-nowrap'>
+          {nameComponent}
+        </AccordionTrigger>
         <AccordionContent>{contentComponent}</AccordionContent>
       </AccordionItem>
     </Accordion>

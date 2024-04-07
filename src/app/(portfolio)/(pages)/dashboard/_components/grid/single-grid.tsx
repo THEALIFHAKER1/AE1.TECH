@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
-export default function longBlank() {
+export default function SingleGrid() {
   return (
     <div className='h-[252px] w-full md:w-fit'>
       <Card className=' h-full border border-input bg-foreground/20 backdrop-blur-sm backdrop-saturate-150 '>
