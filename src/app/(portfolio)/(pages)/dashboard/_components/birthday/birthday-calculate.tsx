@@ -3,7 +3,6 @@ import { birthdayConfig } from '@/config/birthday';
 import { useEffect, useState } from 'react';
 
 export default function BirthdayCalculate() {
-  console.log('client');
   const dob = new Date(birthdayConfig.date);
   const today = new Date();
 

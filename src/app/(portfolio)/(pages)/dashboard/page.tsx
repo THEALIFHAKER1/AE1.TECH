@@ -3,7 +3,7 @@ import { HeadingText } from '@/components/custom/heading-text';
 import TwoGrid from './_components/grid/two-grid';
 import Time from './_components/time/time';
 import SingleGrid from './_components/grid/single-grid';
-import Birthday from './_components/time/birthday/birthday';
+import Birthday from './_components/birthday/birthday';
 import Discord from './_components/discord/discord';
 
 export const metadata = {

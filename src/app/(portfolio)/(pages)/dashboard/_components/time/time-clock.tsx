@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from 'react';
 
 export function TimeClock(interval = 60000) {

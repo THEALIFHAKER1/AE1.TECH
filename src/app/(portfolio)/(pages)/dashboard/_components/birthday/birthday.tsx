@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import Animation from '../../animation';
+import Animation from '../animation';
 import { Icons } from '@/components/icons/icons';
 import BirthdayCalculate from './birthday-calculate';
 
