@@ -1,6 +1,6 @@
 import { DiscordTypes } from '@/types';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { BsDiscord } from 'react-icons/bs';
+import { Icons } from '@/components/icons/icons';
 
 interface ProfileData {
   data: DiscordTypes['discord_user'];
@@ -38,7 +38,7 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
             className='flex items-center gap-1'
             style={{ color: statusInfo.color }}
           >
-            <BsDiscord />
+            <Icons.discord />
             <span className='text-sm'>{statusInfo.text}</span>
           </div>
           <div className='text-xs font-bold'>{data.global_name}</div>
