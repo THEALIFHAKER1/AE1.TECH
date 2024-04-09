@@ -8,8 +8,8 @@ import {
 import { BsDiscord } from 'react-icons/bs';
 import Image from 'next/image';
 import { AlertTitle, AlertDescription } from '@/components/ui/alert';
-import { ElapsedTime } from '@/components/custom/elapsed-time';
-import { ProgressBar } from '@/components/custom/progress-bar';
+import { ElapsedTime } from '@/app/(portfolio)/(pages)/dashboard/_components/discord/elapsed-time';
+import { ProgressBar } from '@/app/(portfolio)/(pages)/dashboard/_components/discord/progress-bar';
 
 interface DiscordActivityCardProps {
   activity: DiscordTypes['activities'][0];
@@ -29,6 +29,7 @@ export default function DiscordActivityCard({
             activity.assets.large_image &&
             activity.assets.large_image.startsWith('spotify:') ? (
               <Image
+                priority
                 src={spotify.album_art_url}
                 width={90}
                 height={90}

@@ -10,7 +10,7 @@ export default async function Discord() {
     <Animation>
       <Card className=' h-full w-full overflow-hidden border border-input bg-[#7289DA] backdrop-blur-sm backdrop-saturate-150 md:max-w-[570px] '>
         <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-          <CardTitle className='text-sm font-medium'>
+          <CardTitle className='text-nowrap text-sm font-medium'>
             Discord Activity
           </CardTitle>
         </CardHeader>

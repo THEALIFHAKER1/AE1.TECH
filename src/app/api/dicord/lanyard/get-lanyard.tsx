@@ -19,3 +19,4 @@ export async function GetLanyard(): Promise<DiscordTypes> {
     throw error;
   }
 }
+setInterval(GetLanyard, 1000);
