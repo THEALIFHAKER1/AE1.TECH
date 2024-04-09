@@ -54,7 +54,9 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
                   {activity.emoji && (
                     <span className='text-sm'>{activity.emoji.name}</span>
                   )}
-                  <p className='text-center align-middle '>{activity.state}</p>
+                  <p className='line-clamp-2 text-center align-middle'>
+                    {activity.state}
+                  </p>
                 </div>
               )
             );
