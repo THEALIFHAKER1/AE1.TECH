@@ -46,11 +46,11 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
         </div>
       </div>
       {status && status.length > 0 && (
-        <div className='flex w-fit gap-5 rounded-xl bg-background/20 p-3 md:w-full'>
+        <div className='flex w-full gap-5 rounded-xl bg-background/20 p-3 sm:w-fit'>
           {status.map((activity, index) => {
             return (
               activity.name === 'Custom Status' && (
-                <div key={index} className='grid place-items-center'>
+                <div key={index} className='grid w-full place-items-center'>
                   {activity.emoji && (
                     <span className='text-sm'>{activity.emoji.name}</span>
                   )}
