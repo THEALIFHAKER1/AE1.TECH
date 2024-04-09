@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
           justifyContent: 'center',
           backgroundColor: 'black',
           borderRadius: '8px',
-          border: '1px solid white',
+          border: '5px solid white',
         }}
       >
         <img

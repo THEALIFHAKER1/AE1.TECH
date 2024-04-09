@@ -41,7 +41,7 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
             <Icons.discord />
             <span className='text-sm'>{statusInfo.text}</span>
           </div>
-          <div className='text-xs font-bold'>{data.global_name}</div>
+          <div className='text-xs font-bold text-white'>{data.global_name}</div>
           <p className='text-xs text-muted-foreground'>{data.username}</p>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
                   {activity.emoji && (
                     <span className='text-sm'>{activity.emoji.name}</span>
                   )}
-                  <p className='line-clamp-2 text-center align-middle'>
+                  <p className='line-clamp-2 text-center align-middle text-white'>
                     {activity.state}
                   </p>
                 </div>

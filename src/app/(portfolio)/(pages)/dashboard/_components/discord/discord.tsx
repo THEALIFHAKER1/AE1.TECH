@@ -12,7 +12,7 @@ export default async function Discord() {
       <Card className='relative h-full w-full overflow-hidden border border-input bg-[#7289DA] backdrop-blur-sm backdrop-saturate-150 md:max-w-[570px] '>
         <Icons.discord className='absolute -right-4 -top-4 h-40 w-40 -rotate-45 text-white/20' />
         <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-          <CardTitle className='text-nowrap text-sm font-medium'>
+          <CardTitle className='text-nowrap text-sm font-medium text-white'>
             Discord Activity
           </CardTitle>
         </CardHeader>
