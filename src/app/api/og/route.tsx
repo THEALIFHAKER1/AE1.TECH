@@ -14,6 +14,7 @@ export async function GET(req: NextRequest) {
   try {
     const fontBold = await interBold;
     const { searchParams } = req.nextUrl;
+    const type = searchParams.get('type');
     const title = searchParams.get('title');
     const link = searchParams.get('link') || siteConfig.url.base;
     const heading = title
@@ -66,9 +67,11 @@ export async function GET(req: NextRequest) {
             <p tw='ml-2 font-bold text-2xl'>{siteConfig.author}</p>
           </div>
           <div tw='flex flex-col flex-1 py-10'>
-            <div tw='flex text-xl uppercase font-bold tracking-tight font-normal'>
-              BLOG POST
-            </div>
+            {type && (
+              <div tw='flex text-xl uppercase font-bold tracking-tight font-normal'>
+                {type}
+              </div>
+            )}
             <div tw='flex text-[80px] font-bold text-[50px]'>{heading}</div>
           </div>
           <div tw='flex items-center w-full justify-between'>
