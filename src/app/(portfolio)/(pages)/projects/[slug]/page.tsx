@@ -20,8 +20,12 @@ export default async function ProjectInfo({
     <>
       <div className='flex w-full items-center justify-between align-middle '>
         <div className='grid pt-4'>
-          <span className='text-6xl font-bold'>{repoDetails.name}</span>
-          <span className='text-lg font-light'>{repoDetails.description}</span>
+          <span className='text-3xl font-bold md:text-6xl'>
+            {repoDetails.name}
+          </span>
+          <span className='text-sm font-light md:text-lg'>
+            {repoDetails.description}
+          </span>
         </div>
         <Link
           href='/projects'
