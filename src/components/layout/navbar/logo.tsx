@@ -17,7 +17,7 @@ function Logo() {
   return (
     <>
       <div className='flex space-x-4'>
-        <Link href='guestbook'>
+        <Link href='/guestbook'>
           <Image
             priority
             src={LOGO}

@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardFooter,
 } from '@/components/ui/card';
-import { ExternalLink, Star } from 'lucide-react';
+import { ExternalLink, Info, Star } from 'lucide-react';
 import Link from 'next/link';
 import { FaCodeFork } from 'react-icons/fa6';
 import LanguageBadge from './language-badge';
@@ -29,14 +29,19 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
               {repo.name}
             </CardTitle>
           </Link>
-          <Link
-            target='_blank'
-            href={repo.homepage || repo.html_url}
-            rel='noopener noreferrer'
-            aria-label="Visit the project's live url/repo"
-          >
-            <ExternalLink className='h-4 w-4 text-muted-foreground' />
-          </Link>
+          <div className='flex gap-2'>
+            <Link href={`projects/${repo.name}`}>
+              <Info className='h-4 w-4 text-muted-foreground' />
+            </Link>
+            <Link
+              target='_blank'
+              href={repo.homepage || repo.html_url}
+              rel='noopener noreferrer'
+              aria-label="Visit the project's live url/repo"
+            >
+              <ExternalLink className='h-4 w-4 text-muted-foreground' />
+            </Link>
+          </div>
         </div>
         <CardDescription className='line-clamp-2 text-xs font-light'>
           {repo.description}
