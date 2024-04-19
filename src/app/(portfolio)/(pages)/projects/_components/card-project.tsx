@@ -6,10 +6,9 @@ import {
   CardDescription,
   CardFooter,
 } from '@/components/ui/card';
-import { ExternalLink, Info, Star } from 'lucide-react';
 import Link from 'next/link';
-import { FaCodeFork } from 'react-icons/fa6';
 import LanguageBadge from './language-badge';
+import { Icons } from '@/components/icons/icons';
 
 export default function CardProject({ repo }: { repo: RepositoryTypes }) {
   return (
@@ -29,9 +28,9 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
               {repo.name}
             </CardTitle>
           </Link>
-          <div className='flex gap-2'>
+          <div className='flex items-center gap-2'>
             <Link href={`projects/${repo.name}`}>
-              <Info className='h-4 w-4 text-muted-foreground' />
+              <Icons.projectData className='h-4 w-4 text-muted-foreground' />
             </Link>
             <Link
               target='_blank'
@@ -39,7 +38,7 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
               rel='noopener noreferrer'
               aria-label="Visit the project's live url/repo"
             >
-              <ExternalLink className='h-4 w-4 text-muted-foreground' />
+              <Icons.externalLink className='h-4 w-4 text-muted-foreground' />
             </Link>
           </div>
         </div>
@@ -57,11 +56,11 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
         </div>
         <div className='flex gap-2'>
           <CardDescription className='flex items-center gap-1'>
-            <FaCodeFork className='h-4 w-4' />
+            <Icons.fork className='h-4 w-4' />
             {repo.forks_count}
           </CardDescription>
           <CardDescription className='flex items-center gap-1'>
-            <Star className='h-4 w-4' />
+            <Icons.star className='h-4 w-4' />
             {repo.stargazers_count}
           </CardDescription>
         </div>

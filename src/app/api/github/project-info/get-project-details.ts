@@ -26,9 +26,7 @@ export async function getProjectDetails(
   });
 
   if (!readmeResponse.ok) {
-    throw new Error(
-      `Failed to fetch readme with status ${readmeResponse.status}`
-    );
+    return { repository, readme: '' };
   }
 
   const readmeData = await readmeResponse.json();

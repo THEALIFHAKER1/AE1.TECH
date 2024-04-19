@@ -6,9 +6,10 @@ import {
   Moon,
   PencilRuler,
   SunMedium,
-  ExternalLink,
   ChevronRight,
   Cake,
+  FileText,
+  Star,
 } from 'lucide-react';
 
 import {
@@ -23,7 +24,7 @@ import {
   FaReact,
   FaYoutube,
 } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaCodeFork, FaXTwitter } from 'react-icons/fa6';
 import { BiLinkExternal, BiLogoTailwindCss } from 'react-icons/bi';
 
 export type IconKeys = keyof typeof icons;
@@ -58,10 +59,14 @@ const icons = {
   youtube: FaYoutube,
   discord: FaDiscord,
   twitter: FaXTwitter,
-  // carousel
+  // projects
   externalLink: BiLinkExternal,
+  projectData: FileText,
+  fork: FaCodeFork,
+  star: Star,
   // birthday
   cake: Cake,
+  // projects
 };
 
 export const Icons: IconsType = icons;

@@ -40,12 +40,14 @@ export default async function ProjectInfo({
           </Button>
         </Link>
       </div>
-      <CollapseComponents
-        nameComponent={
-          <HeadingText subtext='Read Me'>Project Read Me</HeadingText>
-        }
-        contentComponent={repoReadme}
-      />
+      {repoReadme && (
+        <CollapseComponents
+          nameComponent={
+            <HeadingText subtext='Read Me'>Project Read Me</HeadingText>
+          }
+          contentComponent={repoReadme}
+        />
+      )}
       <CollapseComponents
         nameComponent={
           <HeadingText subtext='This is the structure of the project repository. '>
