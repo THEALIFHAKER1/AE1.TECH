@@ -10,6 +10,8 @@ import {
   Cake,
   FileText,
   Star,
+  Copy,
+  CopyCheck,
 } from 'lucide-react';
 
 import {
@@ -64,6 +66,8 @@ const icons = {
   projectData: FileText,
   fork: FaCodeFork,
   star: Star,
+  copy: Copy,
+  copyCheck: CopyCheck,
   // birthday
   cake: Cake,
   // projects

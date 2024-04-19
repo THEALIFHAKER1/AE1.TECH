@@ -27,11 +27,8 @@ export default async function ProjectInfo({
             {repoDetails.description}
           </span>
         </div>
-        <Link
-          href='/projects'
-          className='group flex h-5 flex-row items-center bg-foreground text-background'
-        >
-          <Button className='space-x-1'>
+        <Link href='/projects' className='group flex flex-row items-center '>
+          <Button className='space-x-1 bg-foreground p-5 text-background'>
             <ArrowLeft
               size={16}
               className='duration-200 group-hover:-translate-x-1 '

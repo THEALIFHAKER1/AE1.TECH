@@ -1,10 +1,18 @@
 'use client';
+import { Icons } from '@/components/icons/icons';
+import { Button } from '@/components/ui/button';
 import React, { useState } from 'react';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function CodeSnippet({ code }: { code: any }) {
   const [copied, setCopied] = useState(false);
+
+  if (copied) {
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  }
 
   return (
     <div
@@ -14,11 +22,16 @@ export default function CodeSnippet({ code }: { code: any }) {
         <code>{code}</code>
         <div className='absolute right-0 top-0 flex justify-end'>
           <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
-            <button
-              className={`mt-2 text-xs ${copied ? 'bg-green-500' : 'bg-blue-500'} focus:shadow-outline rounded px-4 py-2 text-white focus:outline-none`}
+            <Button
+              className={` ${copied ? 'bg-green-500' : 'bg-foreground'} focus:shadow-outline rounded  text-background focus:outline-none hover:${copied ? 'bg-green-500' : 'bg-foreground'}`}
+              size={'icon'}
             >
-              {copied ? 'Copied!' : 'Copy'}
-            </button>
+              {copied ? (
+                <Icons.copyCheck className='h-4 w-4' />
+              ) : (
+                <Icons.copy className='h-4 w-4' />
+              )}
+            </Button>
           </CopyToClipboard>
         </div>
       </pre>
