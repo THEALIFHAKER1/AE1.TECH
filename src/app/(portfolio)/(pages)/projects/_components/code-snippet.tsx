@@ -3,18 +3,12 @@ import React, { useState } from 'react';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-export default function CodeSnippet({
-  code,
-  width,
-}: {
-  code: any;
-  width: string;
-}) {
+export default function CodeSnippet({ code }: { code: any }) {
   const [copied, setCopied] = useState(false);
 
   return (
     <div
-      className={`rounded-lg bg-gray-800 px-8 pb-8 pt-4 font-mono text-sm text-white ${width}`}
+      className={`rounded-lg bg-foreground/10 px-8 pb-8 pt-4 font-mono text-sm `}
     >
       <pre className='relative overflow-x-auto whitespace-pre-wrap'>
         <code>{code}</code>
