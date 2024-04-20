@@ -4,32 +4,41 @@ import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import remarkGfm from 'remark-gfm';
+import Image from 'next/image'; // dont remove this
+import remarkEmoji from 'remark-emoji';
+import '@/style/github-markdown.css';
 
 export default async function ReadmeProject({ readme }: { readme: string }) {
   const result = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkEmoji)
     .use(remarkRehype)
+    .use(rehypeStringify)
     .use(rehypeFormat)
     .use(rehypeDocument)
-    .use(rehypeStringify)
     .process(readme);
-  const final = result
-    .toString()
-    .replace(/<img/g, '<img class="max-w-xl"')
-    .replace(/<h1/g, '<h1 class="text-2xl font-semibold"')
-    .replace(/<p/g, '<p class="text-sm font-normal"')
-    .replace(/<h2/g, '<h2 class="text-xl font-semibold"')
-    .replace(
-      /<code/g,
-      '<code class="text-sm font-normal bg-foreground/10 py-1 px-2 rounded inline-block my-1 text-foreground select-all"'
-    )
-    .replace(/<ul>/g, '<li class="list-disc">')
-    .replace(/<a/g, '<a class="text-blue-500"');
+
+  const final = result.toString().replace(/<img/g, '<Image loading="lazy"');
 
   return (
-    <div
-      className='grid gap-2'
-      dangerouslySetInnerHTML={{ __html: String(final) }}
-    />
+    <>
+      <style>{`
+    .markdown-body {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  `}</style>
+      <article className='markdown-body bg-foreground/20 text-foreground'>
+        <div className='' dangerouslySetInnerHTML={{ __html: final }} />
+      </article>
+    </>
   );
 }
