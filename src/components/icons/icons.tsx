@@ -12,6 +12,9 @@ import {
   Star,
   Copy,
   CopyCheck,
+  Eye,
+  BadgeAlert,
+  Calendar,
 } from 'lucide-react';
 
 import {
@@ -68,6 +71,9 @@ const icons = {
   star: Star,
   copy: Copy,
   copyCheck: CopyCheck,
+  eye: Eye,
+  issue: BadgeAlert,
+  calendar: Calendar,
   // birthday
   cake: Cake,
   // projects

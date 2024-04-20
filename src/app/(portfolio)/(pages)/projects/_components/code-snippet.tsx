@@ -16,7 +16,7 @@ export default function CodeSnippet({ code }: { code: any }) {
 
   return (
     <div
-      className={`rounded-lg bg-foreground/10 px-8 pb-8 pt-4 font-mono text-sm `}
+      className={`rounded-lg bg-foreground/20 px-8 pb-8 pt-4 font-mono text-sm `}
     >
       <pre className='relative overflow-x-auto whitespace-pre-wrap'>
         <code className='select-text'>{code}</code>
