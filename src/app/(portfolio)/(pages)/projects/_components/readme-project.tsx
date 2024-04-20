@@ -5,10 +5,8 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import remarkGfm from 'remark-gfm';
-import Image from 'next/image'; // dont remove this
 import remarkEmoji from 'remark-emoji';
 import '@/style/github-markdown.css';
-
 export default async function ReadmeProject({ readme }: { readme: string }) {
   const result = await unified()
     .use(remarkParse)
@@ -19,8 +17,6 @@ export default async function ReadmeProject({ readme }: { readme: string }) {
     .use(rehypeFormat)
     .use(rehypeDocument)
     .process(readme);
-
-  const final = result.toString().replace(/<img/g, '<Image');
 
   return (
     <>
@@ -37,7 +33,10 @@ export default async function ReadmeProject({ readme }: { readme: string }) {
     }
   `}</style>
       <article className='markdown-body bg-foreground/20 text-foreground'>
-        <div className='' dangerouslySetInnerHTML={{ __html: final }} />
+        <div
+          className=''
+          dangerouslySetInnerHTML={{ __html: result.toString() }}
+        />
       </article>
     </>
   );
