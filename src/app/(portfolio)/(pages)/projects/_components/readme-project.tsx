@@ -20,7 +20,7 @@ export default async function ReadmeProject({ readme }: { readme: string }) {
     .use(rehypeDocument)
     .process(readme);
 
-  const final = result.toString().replace(/<img/g, '<Image loading="lazy"');
+  const final = result.toString().replace(/<img/g, '<Image');
 
   return (
     <>
