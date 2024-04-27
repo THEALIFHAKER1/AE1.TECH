@@ -18,7 +18,6 @@ export default async function ProjectInfo({
   const repo = await getProjectDetails(params.slug);
   const repoDetails = repo.repository;
   const repoReadme = repo.readme;
-  console.log(repoReadme);
   return (
     <>
       <div className='flex w-full items-center justify-between align-middle '>
