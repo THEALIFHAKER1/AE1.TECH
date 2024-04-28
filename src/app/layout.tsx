@@ -97,6 +97,7 @@ export default function RootLayout({
                 max-w-screen-2xl
                 space-y-4
                 overflow-auto
+                py-20
                 `}
             >
               {children}

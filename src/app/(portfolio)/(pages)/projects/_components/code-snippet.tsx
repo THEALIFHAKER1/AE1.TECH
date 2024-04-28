@@ -19,7 +19,9 @@ export default function CodeSnippet({ code }: { code: any }) {
       className={`rounded-lg bg-foreground/20 px-8 pb-8 pt-4 font-mono text-sm `}
     >
       <pre className='relative overflow-x-auto whitespace-pre-wrap'>
-        <code className='select-text text-xs md:text-sm'>{code}</code>
+        <code className='select-text text-[0.6rem] leading-none md:text-sm md:leading-normal'>
+          {code}
+        </code>
         <div className='absolute right-0 top-0 flex justify-end'>
           <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
             <Button
