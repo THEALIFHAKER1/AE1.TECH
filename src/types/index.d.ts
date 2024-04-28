@@ -222,3 +222,53 @@ export type DiscordTypes = {
   active_on_discord_mobile: boolean;
   listening_to_spotify: boolean;
 };
+
+export type DuolingoTypes = {
+  username: string;
+  joinedClassroomIds: string[];
+  streak: number;
+  motivation: string;
+  acquisitionSurveyReason: string;
+  shouldForceConnectPhoneNumber: boolean;
+  picture: string;
+  learningLanguage: string;
+  hasFacebookId: boolean;
+  shakeToReportEnabled: boolean | null;
+  liveOpsFeatures: any[]; // You might want to define this interface if possible
+  canUseModerationTools: boolean;
+  id: number;
+  betaStatus: string;
+  hasGoogleId: boolean;
+  privacySettings: any[]; // You might want to define this interface if possible
+  fromLanguage: string;
+  hasRecentActivity15: boolean;
+  _achievements: any[]; // You might want to define this interface if possible
+  observedClassroomIds: string[];
+  bio: string;
+  profileCountry: string | null;
+  chinaUserModerationRecords: any[]; // You might want to define this interface if possible
+  globalAmbassadorStatus: any; // You might want to define this interface if possible
+  currentCourseId: string;
+  hasPhoneNumber: boolean;
+  creationDate: number;
+  achievements: any[]; // You might want to define this interface if possible
+  hasPlus: boolean;
+  name: string;
+  roles: string[];
+  classroomLeaderboardsEnabled: boolean;
+  emailVerified: boolean;
+  courses: any[]; // You might want to define this interface if possible
+  totalXp: number;
+  streakData: {
+    currentStreak: {
+      length: number;
+      startDate: number;
+      endDate: number;
+    };
+    longestStreak: {
+      length: number;
+      startDate: number;
+      endDate: number;
+    };
+  };
+};

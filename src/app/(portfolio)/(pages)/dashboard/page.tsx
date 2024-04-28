@@ -5,6 +5,7 @@ import Time from './_components/time/time';
 import SingleGrid from './_components/grid/single-grid';
 import Birthday from './_components/birthday/birthday';
 import Discord from './_components/discord/discord';
+import Duolingo from './_components/duolingo/duolingo';
 
 export const metadata = {
   title: 'Dashboard',
@@ -24,6 +25,7 @@ export default function DashboardPage() {
           <div className='flex grid-flow-dense flex-wrap gap-2'>
             <TwoGrid TopChildren={<Time />} BottomChildren={<Birthday />} />
             <SingleGrid Children={<Discord />} />
+            <SingleGrid Children={<Duolingo />} />
           </div>
         }
       />
