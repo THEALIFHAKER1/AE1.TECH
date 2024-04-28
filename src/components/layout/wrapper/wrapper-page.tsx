@@ -15,7 +15,7 @@ export default function WrapperPage({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 0.75 }}
-      className={`h-full px-5 md:pb-10`}
+      className={`h-full px-5`}
     >
       {children}
     </motion.div>
