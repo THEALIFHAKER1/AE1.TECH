@@ -22,7 +22,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`blur-background fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto rounded-xl border border-input  p-5  md:hidden`}
+        className={`blur-background fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto rounded-xl border border-input  px-5 py-7  md:hidden`}
       >
         <div className={`flex items-center gap-4`}>
           <ul className={`flex items-center space-x-10 text-sm md:space-x-4 `}>
