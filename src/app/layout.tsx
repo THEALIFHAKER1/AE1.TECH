@@ -74,7 +74,8 @@ export default function RootLayout({
         className={`
           h-dvh 
           select-none 
-          bg-background 
+          overscroll-none 
+          bg-background
           antialiased
           selection:bg-foreground
           selection:text-background
