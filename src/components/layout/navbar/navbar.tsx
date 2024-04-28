@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed z-50 w-full border-b border-input bg-background/30 p-3 px-5 backdrop-blur-sm backdrop-saturate-150 md:border-none`}
+        className={`blur-background fixed z-50 w-full border-b border-input p-3 px-5  md:border-none`}
       >
         <div className={`flex justify-between`}>
           <Logo />
@@ -22,7 +22,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto rounded-xl border border-input bg-background/30 p-5 backdrop-blur-sm backdrop-saturate-150 md:hidden`}
+        className={`blur-background fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto rounded-xl border border-input  p-5  md:hidden`}
       >
         <div className={`flex items-center gap-4`}>
           <ul className={`flex items-center space-x-10 text-sm md:space-x-4 `}>

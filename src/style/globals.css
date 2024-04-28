@@ -75,6 +75,12 @@
   }
 }
 
+@layer components {
+  .blur-background {
+    @apply bg-background/30 backdrop-blur-sm backdrop-saturate-150;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

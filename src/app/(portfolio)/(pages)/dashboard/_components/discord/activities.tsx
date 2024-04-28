@@ -8,7 +8,7 @@ interface ProfileData {
 }
 export default function Activities({ activities, spotify }: ProfileData) {
   return (
-    <div className='grid max-h-[130px] grid-flow-row gap-2 overflow-auto rounded-xl bg-background/20 p-3 sm:grid-flow-col'>
+    <div className='blur-background grid max-h-[130px] grid-flow-row gap-2 overflow-auto rounded-xl p-3 sm:grid-flow-col'>
       {!activities || activities.length === 0 ? (
         <Alert className=''>
           <AlertDescription>No activities currently.</AlertDescription>

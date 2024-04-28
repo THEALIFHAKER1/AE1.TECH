@@ -26,7 +26,7 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
   const statusInfo = Checkstatus(OnlineStatus);
   return (
     <div className='flex gap-2'>
-      <div className='flex w-fit gap-5 rounded-xl bg-background/20 p-3'>
+      <div className='blur-background flex w-fit gap-5 rounded-xl p-3'>
         <Avatar className='h-14 w-14 rounded-md'>
           <AvatarImage
             src={`https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}`}
@@ -46,7 +46,7 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
         </div>
       </div>
       {status && status.length > 0 && (
-        <div className='flex w-full gap-5 rounded-xl bg-background/20 p-3 sm:w-fit'>
+        <div className='blur-background flex w-full gap-5 rounded-xl p-3 sm:w-fit'>
           {status.map((activity, index) => {
             return (
               activity.name === 'Custom Status' && (

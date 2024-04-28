@@ -80,3 +80,17 @@ const icons = {
 };
 
 export const Icons: IconsType = icons;
+
+export const duolingoIcons = {
+  JA: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/6d303af9f69038c1db4bffa52abdc997.svg',
+  DE: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/097f1c20a4f421aa606367cd33893083.svg',
+  FR: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/7488bd7cd28b768ec2469847a5bc831e.svg',
+  ZHCN: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/8537efd75f444d1d7dc21d8caf563f58.svg',
+  AR: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/e052b83e772ae592295961e595ca50ef.svg',
+
+  Streak:
+    'https://d35aaqx5ub95lt.cloudfront.net/images/profile/8a6dca76019d059a81c4c7c1145aa7a4.svg',
+  XP: 'https://d35aaqx5ub95lt.cloudfront.net/images/profile/01ce3a817dd01842581c3d18debcbc46.svg',
+  League:
+    'https://d35aaqx5ub95lt.cloudfront.net/images/leagues/192181672ada150becd83a74a4266ae9.svg',
+};
