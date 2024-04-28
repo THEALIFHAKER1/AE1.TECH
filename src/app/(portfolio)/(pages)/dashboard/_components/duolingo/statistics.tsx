@@ -21,7 +21,7 @@ export default function Statistics({ data }: StatisticsProps) {
     {
       src: duolingoIcons.League,
       alt: 'League',
-      value: 'Bronze',
+      value: 'Silver',
     },
   ];
   return (
