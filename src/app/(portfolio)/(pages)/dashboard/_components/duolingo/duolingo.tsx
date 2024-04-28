@@ -8,7 +8,7 @@ export default async function Duolingo() {
   const data = await getUserInfo();
 
   return (
-    <Card className='relative h-full overflow-hidden border border-input bg-[#439c01] backdrop-blur-sm backdrop-saturate-150 '>
+    <Card className='relative h-full overflow-hidden border border-input bg-[#58cc02] backdrop-blur-sm backdrop-saturate-150 '>
       <Image
         className='absolute -bottom-12 right-0 -z-10'
         src={DuolingoImage}

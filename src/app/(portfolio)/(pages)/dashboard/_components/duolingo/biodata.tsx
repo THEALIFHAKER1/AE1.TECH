@@ -58,7 +58,7 @@ export default function Biodata({ data }: Biodata) {
                 );
               })}
               {totalCourses > maxCoursesToShow && (
-                <div className='grid w-full place-items-center rounded-sm border border-foreground/30 text-xs'>
+                <div className='grid w-full place-items-center rounded-sm border border-foreground/30 text-xs text-white'>
                   +{totalCourses - maxCoursesToShow}
                 </div>
               )}

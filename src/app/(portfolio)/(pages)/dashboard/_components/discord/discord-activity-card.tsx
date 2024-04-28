@@ -77,7 +77,7 @@ export default function DiscordActivityCard({
       </TooltipProvider>
       <div className='w-full'>
         <AlertTitle className='text-xs'>{activity.name}</AlertTitle>
-        <AlertDescription className='text-xs text-muted-foreground'>
+        <AlertDescription className='text-nowrap text-xs text-muted-foreground'>
           {activity.details || null}
         </AlertDescription>
         <AlertDescription className='text-xs text-muted-foreground'>
@@ -96,7 +96,7 @@ export default function DiscordActivityCard({
           ) : null}
         </AlertDescription>
         {activity.timestamps && activity.timestamps.start ? (
-          <AlertDescription className='text-xs text-muted-foreground'>
+          <AlertDescription className='text-nowrap text-xs text-muted-foreground'>
             <ElapsedTime unixTimestamp={activity.timestamps.start} />
           </AlertDescription>
         ) : null}

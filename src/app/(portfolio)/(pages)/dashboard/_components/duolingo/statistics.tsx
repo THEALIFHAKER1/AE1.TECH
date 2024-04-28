@@ -7,7 +7,7 @@ interface StatisticsProps {
 export default function Statistics({ data }: StatisticsProps) {
   console.log(data);
   return (
-    <div className='grid w-full grid-flow-col gap-5 rounded-xl bg-background/20 p-3'>
+    <div className='grid w-full grid-flow-col gap-5 rounded-xl bg-background/20 p-3 text-white'>
       <div className='grid place-items-center text-center'>
         <Image
           src='https://d35aaqx5ub95lt.cloudfront.net/images/profile/8a6dca76019d059a81c4c7c1145aa7a4.svg'
