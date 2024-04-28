@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import localFont from 'next/font/local';
-import { Button, buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons/icons';
-import { transform } from 'framer-motion';
 import '@/style/not-found.css';
 const myFont = localFont({
   src: '../assets/fonts/cyborg-punk.ttf',

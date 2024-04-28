@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Biodata from './biodata';
 import { getUserInfo } from '@/app/api/duolingo/get-userinfo/get-userinfo';
 import Statistics from './statistics';
-import DuolingoImage from './duolingo-family.png';
+import DuolingoImage from '@/assets/images/duolingo/duolingo-family.png';
+
 export default async function Duolingo() {
   const data = await getUserInfo();
-
   return (
     <Card className=' relative h-full overflow-hidden border border-input bg-[#58cc02] backdrop-blur-sm backdrop-saturate-150 '>
       <Image
