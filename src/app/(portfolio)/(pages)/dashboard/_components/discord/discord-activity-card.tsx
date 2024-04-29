@@ -30,7 +30,7 @@ export default function DiscordActivityCard({
             activity.assets.large_image.startsWith('spotify:') ? (
               <Image
                 priority
-                src={spotify.album_art_url}
+                src={spotify.album_art_url ?? ''}
                 width={90}
                 height={90}
                 alt='Activity image'

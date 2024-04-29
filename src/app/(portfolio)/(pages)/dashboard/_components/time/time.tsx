@@ -1,6 +1,6 @@
 'use client';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import Animation from '../animation';
+import { CardAnimation, CardContentCardAnimation } from '../animation';
 import React, { useEffect, useRef } from 'react';
 import { timeZoneFormatterConfig } from '@/config/timeZoneFormatter';
 import drawStars from './draw-star';
@@ -18,7 +18,7 @@ export default function Time() {
   }, [isNight]);
 
   return (
-    <Animation>
+    <CardAnimation>
       <Card
         className={` relative h-[150px] w-full overflow-hidden text-white md:w-[150px] ${
           !isNight && 'bg-blue-400'
@@ -41,15 +41,17 @@ export default function Time() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className={'whitespace-nowrap text-lg font-bold'}>
-                {timeZoneFormatterConfig.format(time)}
-              </div>
-              <p className={`text-xs font-light`}>Malaysia Time (GMT+8)</p>
-              {!isNight && <Sun />}
+              <CardContentCardAnimation>
+                <div className={'whitespace-nowrap text-lg font-bold'}>
+                  {timeZoneFormatterConfig.format(time)}
+                </div>
+                <p className={`text-xs font-light`}>Malaysia Time (GMT+8)</p>
+                {!isNight && <Sun />}
+              </CardContentCardAnimation>
             </CardContent>
           </div>
         </div>
       </Card>
-    </Animation>
+    </CardAnimation>
   );
 }

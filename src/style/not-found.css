@@ -76,7 +76,7 @@
 }
 
 .paths {
-  animation: paths 5s step-end infinite;
+  cardanimation: paths 5s step-end infinite;
 }
 
 @keyframes paths {
@@ -332,11 +332,11 @@
 }
 
 .glitch span {
-  animation: paths 5s step-end infinite;
+  cardanimation: paths 5s step-end infinite;
 }
 
 .glitch::before {
-  animation:
+  cardanimation:
     paths 5s step-end infinite,
     opacity 5s step-end infinite,
     font 8s step-end infinite,
@@ -344,7 +344,7 @@
 }
 
 .glitch::after {
-  animation:
+  cardanimation:
     paths 5s step-end infinite,
     opacity 5s step-end infinite,
     font 7s step-end infinite,
