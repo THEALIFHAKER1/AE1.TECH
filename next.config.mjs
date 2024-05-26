@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import withSerwistInit from '@serwist/next';
 
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  cacheOnFrontEndNav: true,
-  reloadOnOnline: true,
-  disable: process.env.NODE_ENV === 'development',
+const withSerwist = withSerwistInit({
+  swSrc: 'src/app/sw.ts',
+  swDest: 'public/sw.js',
 });
 
 const nextConfig = {
@@ -28,4 +25,4 @@ const nextConfig = {
   },
 };
 
-export default withPWA(nextConfig);
+export default withSerwist(nextConfig);
