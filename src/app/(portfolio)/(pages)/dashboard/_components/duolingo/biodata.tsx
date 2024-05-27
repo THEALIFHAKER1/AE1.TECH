@@ -37,7 +37,7 @@ export default function Biodata({ data }: Biodata) {
                     <Image
                       width={24}
                       height={24}
-                      src={languageMap[course.id]}
+                      src={languageMap[course.id] as string}
                       alt={course.id}
                     />
                   </div>
@@ -60,7 +60,7 @@ export default function Biodata({ data }: Biodata) {
                       <Image
                         width={50}
                         height={50}
-                        src={languageMap[course.id]}
+                        src={languageMap[course.id] as string}
                         alt={course.id}
                       />
                       <div className='my-auto flex w-full justify-between'>

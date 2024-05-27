@@ -36,10 +36,10 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
         <div className='flex flex-col justify-center'>
           <div
             className='flex items-center gap-1'
-            style={{ color: statusInfo.color }}
+            style={{ color: statusInfo?.color }}
           >
             <Icons.discord />
-            <span className='text-sm'>{statusInfo.text}</span>
+            <span className='text-sm'>{statusInfo?.text}</span>
           </div>
           <div className='text-xs font-bold text-white'>{data.global_name}</div>
           <p className='text-xs text-muted-foreground'>{data.username}</p>

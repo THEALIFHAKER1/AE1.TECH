@@ -2,7 +2,7 @@
 import { siteConfig } from '@/config/site';
 import { env } from '@/env.mjs';
 import { ImageResponse } from 'next/og';
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 
 export const runtime = 'edge';
 
@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = req.nextUrl;
     const type = searchParams.get('type');
     const title = searchParams.get('title');
-    const link = searchParams.get('link') || siteConfig.url.base;
+    const link = searchParams.get('link') ?? siteConfig.url.base;
     const heading = title
       ? title.length > 140
         ? `${title.substring(0, 140)}...`

@@ -4,12 +4,12 @@ import Biodata from './biodata';
 import { getUserInfo } from '@/app/api/duolingo/get-userinfo/get-userinfo';
 import Statistics from './statistics';
 import DuolingoImage from '@/assets/images/duolingo/duolingo-family.png';
-import { CardAnimation, CardContentCardAnimation } from '../animation';
+
+export const runtime = 'force-dynamic';
 
 export default async function Duolingo() {
   const data = await getUserInfo();
   return (
-    <CardAnimation>
       <Card className=' relative h-full overflow-hidden border border-input bg-[#58cc02] backdrop-blur-sm backdrop-saturate-150 '>
         <Image
           className='absolute -bottom-12 right-0 -z-10'
@@ -24,14 +24,9 @@ export default async function Duolingo() {
           </CardTitle>
         </CardHeader>
         <CardContent className='grid max-h-max gap-2'>
-          <CardContentCardAnimation>
             <Biodata data={data} />
-          </CardContentCardAnimation>
-          <CardContentCardAnimation>
             <Statistics data={data} />
-          </CardContentCardAnimation>
         </CardContent>
       </Card>
-    </CardAnimation>
   );
 }
