@@ -81,6 +81,19 @@ const icons = {
 
 export const Icons: IconsType = icons;
 
+export type ImagesKeys = keyof typeof images
+
+type ImagesType = {
+  [key in ImagesKeys]: string
+}
+
+const images = {
+  logo: "/icons/icon.png",
+}
+
+export const Images: ImagesType = images
+
+
 export const duolingoIcons = {
   JA: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/6d303af9f69038c1db4bffa52abdc997.svg',
   DE: 'https://d35aaqx5ub95lt.cloudfront.net/images/borderlessFlags/097f1c20a4f421aa606367cd33893083.svg',

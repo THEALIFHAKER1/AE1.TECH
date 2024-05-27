@@ -88,8 +88,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <WrapperPage>
+          {/* <Navbar /> */}
+          <WrapperPage
+            navbar={<Navbar />}
+            footer={<Footer />}
+          >
             <main
               className={`
                 border-forground
@@ -104,7 +107,7 @@ export default function RootLayout({
               {children}
             </main>
           </WrapperPage>
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>
