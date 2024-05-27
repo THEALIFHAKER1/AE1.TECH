@@ -13,7 +13,6 @@
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-progress": "^1.0.3",
-    "@serwist/next": "^9.0.2",
     "@types/react-copy-to-clipboard": "^5.0.7",
     "add": "^2.0.6",
     "duolingo": "^1.2.4",
@@ -35,7 +34,6 @@
     "remark-rehype": "^11.1.0",
     "to-vfile": "^8.0.0",
     "use-debounce": "^10.0.0",
-
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-checkbox": "^1.0.4",
