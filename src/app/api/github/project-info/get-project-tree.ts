@@ -44,7 +44,7 @@ async function fetchProjectTree(
     // Recursively fetch contents for directories
     for (let i = 0; i < contents.length; i++) {
       const item = contents[i];
-      if (item.type === 'dir') {
+      if (item && item.type === 'dir') {
         item.contents = await fetchProjectTree(repoName, item.path, token);
       }
     }

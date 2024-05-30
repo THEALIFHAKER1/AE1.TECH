@@ -8,14 +8,14 @@ interface LanguageBadgeProps {
 }
 
 export default function LanguageBadge({ language }: LanguageBadgeProps) {
+  const languageColor = LanguagesColorConfig[language as keyof typeof LanguagesColorConfig];
+  const textColor = getTextColor(languageColor ?? '');
+
   return (
     <Badge
       style={{
-        backgroundColor:
-          LanguagesColorConfig[language as keyof typeof LanguagesColorConfig],
-        color: `${getTextColor(
-          LanguagesColorConfig[language as keyof typeof LanguagesColorConfig]
-        )}`,
+        backgroundColor: languageColor,
+        color: `${textColor}`,
       }}
       className='mx-1 rounded-sm'
     >

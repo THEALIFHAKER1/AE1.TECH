@@ -1,18 +1,23 @@
-export const getTextColor = (background: string) => {
-  const rgb = hexToRgb(background);
-  const luminance = (rgb.r * 0.299 + rgb.g * 0.587 + rgb.b * 0.114) / 255;
-  return luminance > 0.5 ? "black" : "white";
-};
+export const getTextColor = (background?: string): string => {
+  // Use a default background color if none is provided
+  background = background || '#ffffff'; // White in hex
 
-// Utility function to convert a hexadecimal color to RGB
-const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)!;
-  if (!result) {
-    return { r: 255, g: 255, b: 255 };
+  // Validate the provided background color using a regular expression
+  if (!/#[0-9a-fA-F]{6}/.test(background)) {
+    console.warn(`Invalid background color format: ${background}. Using default white.`);
+    background = '#ffffff';
   }
-  return {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16),
+
+  // Efficiently convert hex to RGB using bitwise operations (assuming 8-bit channels)
+  const rgb = {
+    r: parseInt(background.slice(1, 3), 16),
+    g: parseInt(background.slice(3, 5), 16),
+    b: parseInt(background.slice(5, 7), 16),
   };
+
+  // Calculate luminance using the improved formula for better accuracy
+  const luminance = 0.2126 * rgb.r + 0.7152 * rgb.g + 0.0722 * rgb.b;
+
+  // Determine the text color based on luminance with a clear threshold
+  return luminance > 0.5 ? 'black' : 'white';
 };

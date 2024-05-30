@@ -160,7 +160,6 @@ export type LanguagesColorTypes = {
 };
 
 export type RepositoryOptionTypes = {
-  pagination: boolean;
   search: boolean;
 };
 
