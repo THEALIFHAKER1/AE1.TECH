@@ -17,7 +17,7 @@ export default function LanguageBadge({ language }: LanguageBadgeProps) {
         backgroundColor: languageColor,
         color: `${textColor}`,
       }}
-      className='mx-1 rounded-sm'
+      className='rounded-sm text-[0.6rem] leading-2'
     >
       {language}
     </Badge>

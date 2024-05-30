@@ -1,7 +1,5 @@
-'use client';
 import { RepositoryTypes } from '@/types';
 import CardProject from './card-project';
-import { useState } from 'react';
 import { SearchBar } from '@/components/custom/search-bar';
 import { RepositoryOptionConfig } from '@/config/repository-option';
 export default function AllProjects({

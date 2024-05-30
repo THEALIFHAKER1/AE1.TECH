@@ -14,7 +14,7 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
   return (
     <Card
       key={repo.id}
-      className='flex h-40 flex-col justify-between bg-foreground/20 saturate-150 filter backdrop-blur-md'
+      className='flex h-40 justify-between flex-col bg-foreground/20 saturate-150 filter backdrop-blur-md'
     >
       <CardHeader>
         <div className='flex justify-between'>
@@ -47,7 +47,7 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
         </CardDescription>
       </CardHeader>
       <CardFooter className='flex justify-between'>
-        <div className=''>
+        <div className='flex-nowrap gap-2 flex'>
           {Object.keys(repo.languages)
             .filter((language, index) => index < 3 && language !== 'Hack')
             .map((language) => (
