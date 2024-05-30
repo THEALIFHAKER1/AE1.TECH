@@ -15,9 +15,6 @@ export const getTextColor = (background?: string): string => {
     b: parseInt(background.slice(5, 7), 16),
   };
 
-  // Calculate luminance using the improved formula for better accuracy
-  const luminance = 0.2126 * rgb.r + 0.7152 * rgb.g + 0.0722 * rgb.b;
-
-  // Determine the text color based on luminance with a clear threshold
-  return luminance > 0.5 ? 'black' : 'white';
+  const luminance = (rgb.r * 0.299 + rgb.g * 0.587 + rgb.b * 0.114) / 255;
+  return luminance > 0.5 ? "black" : "white";
 };
