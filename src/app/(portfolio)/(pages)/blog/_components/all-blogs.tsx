@@ -4,6 +4,7 @@ import { PostItem } from "../post-item";
 interface AllBlogsProps {
   blogs: Array<{
     slug: string;
+    banner?: string;
     date: string;
     title: string;
     description?: string;
@@ -18,7 +19,7 @@ export default function AllBlogs({ blogs }: AllBlogsProps) {
         {blogs?.length > 0 ? (
           <>
             {blogs.map((post) => {
-              const { slug, date, title, description, tags } = post;
+              const { slug, date, title, description, tags, banner } = post;
               return (
                 <PostItem
                   key={slug}
@@ -27,6 +28,7 @@ export default function AllBlogs({ blogs }: AllBlogsProps) {
                   title={title}
                   description={description}
                   tags={tags}
+                  banner={banner}
                 />
               );
             })}

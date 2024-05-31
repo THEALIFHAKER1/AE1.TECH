@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { formatDate } from "@/lib/format-date";
 import { Tag } from "./tag";
 import Image from "next/image";
 import {
@@ -12,9 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-// const banner = "https://www.iamgconferences.org/iamg2022/images/iamg2022.png";
-const banner = "https://xetera.dev/_astro/banner.b43fa551_hNDLh.webp";
+import { buttonVariants } from "@/components/ui/button";
 
 interface PostItemProps {
   slug: string;
@@ -22,10 +18,12 @@ interface PostItemProps {
   description?: string;
   date: string;
   tags?: Array<string>;
+  banner?: string;
 }
 
 export function PostItem({
   slug,
+  banner,
   title,
   description,
   date,

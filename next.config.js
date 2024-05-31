@@ -44,7 +44,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.iamgconferences.org",
+        hostname: "upload.wikimedia.org",
       },
     ],
   },

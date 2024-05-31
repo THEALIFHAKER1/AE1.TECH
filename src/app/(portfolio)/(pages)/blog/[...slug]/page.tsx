@@ -6,6 +6,7 @@ import "@/styles/mdx.css";
 import { type Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "../tag";
+
 interface PostPageProps {
   params: {
     slug: string[];
