@@ -8,7 +8,7 @@ function HeroProfile() {
       <Image
         width={400}
         height={400}
-        src={HeroPicture}
+        src={HeroPicture as string}
         alt='Hero Picture'
         priority
       />

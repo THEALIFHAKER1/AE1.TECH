@@ -20,7 +20,7 @@ function Logo() {
         <Link href='/guestbook'>
           <Image
             priority
-            src={LOGO}
+            src={LOGO as string}
             alt='logo'
             width={50}
             height={50}

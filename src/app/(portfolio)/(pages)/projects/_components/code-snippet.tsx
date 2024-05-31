@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-export default function CodeSnippet({ code }: { code: any }) {
+export default function CodeSnippet({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
 
   if (copied) {

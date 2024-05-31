@@ -42,7 +42,7 @@ export type DiscordTypes = {
     };
     application_id?: string;
   }>;
-  discord_status: 'online' | 'offline' | 'idle' | 'dnd' | string;
+  discord_status: 'online' | 'offline' | 'idle' | 'dnd' | 'invisible' | 'phone';
   active_on_discord_web: boolean;
   active_on_discord_desktop: boolean;
   active_on_discord_mobile: boolean;

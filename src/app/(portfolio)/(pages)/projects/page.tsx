@@ -4,7 +4,6 @@ import CollapseComponents from '@/components/custom/collapse-components';
 import AllProjects from './_components/all-projects';
 import ProjectsCarousel from './_components/spotlight-projects';
 import { getRepositories } from '@/app/api/github/get-repositories/get-repositories';
-import { type RepositoryTypes } from '@/types';
 
 export const metadata = {
   title: 'Projects',
@@ -20,7 +19,7 @@ export default async function ProjectPage({
 }) {
   const searchTerm = searchParams?.Search ?? '';
 
-  const repositories = (await getRepositories()) as RepositoryTypes[];
+  const repositories = (await getRepositories());
   const filteredRepositories = repositories.filter((repo) =>
     repo.name.toLowerCase().includes(searchTerm?.toLowerCase() || '')
   );

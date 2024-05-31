@@ -156,7 +156,6 @@ interface RepositoryTypes {
 export type LanguagesColorTypes = Record<string, string>;
 
 export type RepositoryOptionTypes = {
-  pagination: boolean;
   search: boolean;
 };
 
@@ -207,7 +206,7 @@ export type DiscordTypes = {
     };
     application_id?: string;
   }>;
-  discord_status: 'online' | 'offline' | 'idle' | 'dnd' | string;
+  discord_status: 'online' | 'offline' | 'idle' | 'dnd' | 'invisible' | 'phone';
   active_on_discord_web: boolean;
   active_on_discord_desktop: boolean;
   active_on_discord_mobile: boolean;
@@ -225,30 +224,34 @@ export type DuolingoTypes = {
   learningLanguage: string;
   hasFacebookId: boolean;
   shakeToReportEnabled: boolean | null;
-  liveOpsFeatures: any[]; // You might want to define this interface if possible
   canUseModerationTools: boolean;
   id: number;
   betaStatus: string;
   hasGoogleId: boolean;
-  privacySettings: any[]; // You might want to define this interface if possible
   fromLanguage: string;
   hasRecentActivity15: boolean;
-  _achievements: any[]; // You might want to define this interface if possible
   observedClassroomIds: string[];
   bio: string;
   profileCountry: string | null;
-  chinaUserModerationRecords: any[]; // You might want to define this interface if possible
-  globalAmbassadorStatus: any; // You might want to define this interface if possible
   currentCourseId: string;
   hasPhoneNumber: boolean;
   creationDate: number;
-  achievements: any[]; // You might want to define this interface if possible
   hasPlus: boolean;
   name: string;
   roles: string[];
   classroomLeaderboardsEnabled: boolean;
   emailVerified: boolean;
-  courses: any[]; // You might want to define this interface if possible
+  courses: Array<{
+    id: string;
+    title: string;
+    level: number;
+    xp: number;
+    skillLevels: Array<{
+      id: string;
+      level: number;
+      xp: number;
+    }>;
+  }>;
   totalXp: number;
   streakData: {
     currentStreak: {

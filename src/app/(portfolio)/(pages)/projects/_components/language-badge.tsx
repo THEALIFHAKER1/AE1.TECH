@@ -8,7 +8,7 @@ interface LanguageBadgeProps {
 }
 
 export default function LanguageBadge({ language }: LanguageBadgeProps) {
-  const languageColor = LanguagesColorConfig[language as keyof typeof LanguagesColorConfig];
+  const languageColor = LanguagesColorConfig[language];
   const textColor = getTextColor(languageColor ?? '');
 
   return (
