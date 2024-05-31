@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter as FontSans } from "next/font/google"
 import '@/style/globals.css';
 import { ThemeProvider } from '@/components/provider/theme-provider';
 import { siteConfig } from '@/config/site';
 import Navbar from '@/components/layout/navbar/navbar';
 import Footer from '@/components/layout/footer/footer';
 import WrapperPage from '../components/layout/wrapper/wrapper-page';
+import { cn } from '@/lib/utils';
 
-const inter = Inter({ subsets: ['latin'] });
-
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
@@ -71,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`
+        className={cn(`
           h-dvh 
           select-none 
           overscroll-none 
@@ -79,8 +82,8 @@ export default function RootLayout({
           antialiased
           selection:bg-foreground
           selection:text-background
-          ${inter.className}
-          `}
+          font-sans`,  fontSans.variable
+        ) }
       >
         <ThemeProvider
           attribute='class'
