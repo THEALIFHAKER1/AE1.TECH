@@ -32,9 +32,9 @@
       "@📸/*": ["./src/assets/*"],
       "@📦/*": ["./src/config/*"],
       "@⚙️/*": ["./src/types/*"],
-      "@📃/*": ["./src/mdx/*"],
+      "@📃/*": ["./.velite"],
       "@🛠️/*": ["./src/lib/*"],
-      "#site/content": ["./.velite"]
+      "@📃/blog": ["./.velite"]
     }
   },
   "types": ["@serwist/next/typings"],
@@ -45,8 +45,7 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.js",
-    ".next/types/**/*.ts",
-    
+    ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "./public/sw.js","next.config.mjs"]
+  "exclude": ["node_modules", "./public/sw.js", "next.config.js"]
 }

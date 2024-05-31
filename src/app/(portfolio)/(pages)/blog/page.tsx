@@ -3,16 +3,13 @@ import { HeadingText } from '@/components/custom/heading-text';
 import { type Metadata } from 'next';
 import AllBlogs from './_components/all-blogs';
 import PinnedBlogs from './_components/pinned-blogs';
-import { posts } from '#site/content';
-import { PostItem } from './post-item';
+import { posts } from '@📃/blog';
 import { sortPosts } from '@/lib/sort-post';
 
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'A blog about web development and programming',
 };
-
-// const POSTS_PER_PAGE = 5;
 
 interface BlogPageProps {
   searchParams: {
@@ -22,38 +19,21 @@ interface BlogPageProps {
 }
 
 export default async function BlogPage({ 
-  // searchParams
+  searchParams
  }: BlogPageProps) {
-  // const currentPage = Number(searchParams?.page) || 1;
-  // const searchTerm = searchParams?.Search || '';
- const sortedPosts = sortPosts(posts.filter((post) => post.published));
- const displayPosts = sortedPosts
+  const searchTerm = searchParams?.Search ?? '';
+const searchResults = sortPosts(posts.filter((post) => post.published)) // Filter for published posts only // Sort the published posts
+  .filter((post) =>
+    searchTerm?.toLowerCase() // Check if searchTerm exists and convert to lowercase
+      ? post.title.toLowerCase().includes(searchTerm.toLowerCase()) // Filter by title search
+      : true // Include all posts if no searchTerm
+  );
+
+
 
   return (
-    <>
-
-{displayPosts?.length > 0 ? (
-            <ul className="flex flex-col">
-              {displayPosts.map((post) => {
-                const { slug, date, title, description, tags } = post;
-                return (
-                  <li key={slug}>
-                    <PostItem
-                      slug={slug}
-                      date={date}
-                      title={title}
-                      description={description}
-                      tags={tags}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            <p>Nothing to see here yet</p>
-          )}
-          
-      {/* <CollapseComponents
+    <>          
+      <CollapseComponents
         nameComponent={
           <HeadingText subtext='Pinned Blog'>Pinned Blog</HeadingText>
         }
@@ -63,8 +43,8 @@ export default async function BlogPage({
         nameComponent={
           <HeadingText subtext='All of my blogs'>All Blogs</HeadingText>
         }
-        contentComponent={<AllBlogs />}
-      /> */}
+        contentComponent={<AllBlogs blogs={searchResults} />}
+      />
     </>
   );
 }
