@@ -1,5 +1,18 @@
 /** @type {import('next').NextConfig} */
 import withSerwistInit from '@serwist/next';
+import { build } from 'velite';
+
+class VeliteWebpackPlugin {
+  static started = false;
+  apply(compiler) {
+    compiler.hooks.beforeCompile.tapPromise('VeliteWebpackPlugin', async () => {
+      if (VeliteWebpackPlugin.started) return;
+      VeliteWebpackPlugin.started = true;
+      const dev = compiler.options.mode === 'development';
+      await build({ watch: dev, clean: !dev });
+    });
+  }
+}
 
 const withSerwist = withSerwistInit({
   swSrc: 'src/app/sw.ts',
@@ -25,4 +38,10 @@ const nextConfig = {
   },
 };
 
-export default withSerwist(nextConfig);
+export default withSerwist({
+  webpack: config => {
+    config.plugins.push(new VeliteWebpackPlugin());
+    return config;
+  },
+  ...nextConfig,
+});
