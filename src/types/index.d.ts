@@ -156,7 +156,6 @@ interface RepositoryTypes {
 export type LanguagesColorTypes = Record<string, string>;
 
 export type RepositoryOptionTypes = {
-  pagination: boolean;
   search: boolean;
 };
 
