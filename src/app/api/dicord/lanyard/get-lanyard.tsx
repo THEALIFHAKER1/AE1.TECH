@@ -50,7 +50,7 @@ export type DiscordTypes = {
 };
 
 const DiscordID: string = env.NEXT_PUBLIC_APP_DISCORD_ID;
-const socket: string = 'wss://api.lanyard.rest/socket';
+const socket = 'wss://api.lanyard.rest/socket';
 
 export default function GetLanyard(): DiscordTypes | null {
   const [Lanyard, setLanyard] = useState<DiscordTypes | null>(null);

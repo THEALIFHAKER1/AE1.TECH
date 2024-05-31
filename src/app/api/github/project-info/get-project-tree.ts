@@ -27,7 +27,7 @@ async function fetchProjectTree(
       throw new Error(`Failed to fetch ${apiUrl}: ${response.statusText}`);
     }
 
-    let contents: ContentItem[] = await response.json();
+    const contents: ContentItem[] = await response.json();
 
     // Sort contents: directories first, then files
     contents.sort((a, b) => {
@@ -41,8 +41,7 @@ async function fetchProjectTree(
     });
 
     // Recursively fetch contents for directories
-    for (let i = 0; i < contents.length; i++) {
-      const item = contents[i];
+    for (const item of contents) {
       if (item && item.type === 'dir') {
         item.contents = await fetchProjectTree(repoName, item.path, token);
       }
@@ -68,7 +67,7 @@ export async function getProjectTree(repoName: string) {
   }
 }
 
-export function parseRepoData(data: ContentItem[], prefix: string = '') {
+export function parseRepoData(data: ContentItem[], prefix = '') {
   let structure = '';
 
   data.forEach((item) => {

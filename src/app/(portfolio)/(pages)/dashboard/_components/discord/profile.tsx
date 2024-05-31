@@ -20,7 +20,7 @@ export default function Profile({ data, OnlineStatus, status }: ProfileData) {
       dnd: { text: 'Do Not Disturb', color: '#F04747' },
     };
 
-    return statusMap[status] || statusMap['offline'];
+    return statusMap[status] ?? statusMap.offline;
   };
 
   const statusInfo = Checkstatus(OnlineStatus);

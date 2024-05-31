@@ -7,7 +7,7 @@ export default function BirthdayCalculate() {
   const today = new Date();
 
   const calculateDaysUntilBirthday = () => {
-    let nextBirthday = new Date(
+    const nextBirthday = new Date(
       today.getFullYear(),
       dob.getMonth(),
       dob.getDate()

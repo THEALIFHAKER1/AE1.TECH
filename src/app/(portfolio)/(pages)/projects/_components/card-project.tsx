@@ -34,7 +34,7 @@ export default function CardProject({ repo }: { repo: RepositoryTypes }) {
             </Link>
             <Link
               target='_blank'
-              href={repo.homepage || repo.html_url}
+              href={repo.homepage ?? repo.html_url}
               rel='noopener noreferrer'
               aria-label="Visit the project's live url/repo"
             >

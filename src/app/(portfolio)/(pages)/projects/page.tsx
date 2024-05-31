@@ -18,7 +18,7 @@ export default async function ProjectPage({
     Search?: string;
   };
 }) {
-  const searchTerm = searchParams?.Search || '';
+  const searchTerm = searchParams?.Search ?? '';
 
   const repositories = (await getRepositories()) as RepositoryTypes[];
   const filteredRepositories = repositories.filter((repo) =>

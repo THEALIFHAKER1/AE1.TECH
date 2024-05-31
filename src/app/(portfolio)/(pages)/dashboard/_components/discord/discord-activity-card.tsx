@@ -25,9 +25,7 @@ export default function DiscordActivityCard({
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
-            {activity.assets &&
-            activity.assets.large_image &&
-            activity.assets.large_image.startsWith('spotify:') ? (
+            {activity.assets?.large_image?.startsWith('spotify:') ? (
               <Image
                 priority
                 src={spotify.album_art_url ?? ''}
@@ -70,7 +68,7 @@ export default function DiscordActivityCard({
           </TooltipTrigger>
           <TooltipContent>
             {activity.assets
-              ? activity.assets.large_text || activity.name
+              ? activity.assets.large_text ?? activity.name
               : activity.name}
           </TooltipContent>
         </Tooltip>
@@ -78,16 +76,15 @@ export default function DiscordActivityCard({
       <div className='w-full'>
         <AlertTitle className='text-xs'>{activity.name}</AlertTitle>
         <AlertDescription className='text-nowrap text-xs text-muted-foreground'>
-          {activity.details || null}
+          {activity.details ?? null}
         </AlertDescription>
         <AlertDescription className='text-xs text-muted-foreground'>
           {(!activity.assets?.large_image?.startsWith('spotify:') &&
-            activity.state) ||
+            activity.state) ??
             null}
         </AlertDescription>
         <AlertDescription className=''>
-          {activity.timestamps &&
-          activity.timestamps.start &&
+          {activity.timestamps?.start &&
           activity.timestamps.end ? (
             <ProgressBar
               start={activity.timestamps.start}
@@ -95,7 +92,7 @@ export default function DiscordActivityCard({
             />
           ) : null}
         </AlertDescription>
-        {activity.timestamps && activity.timestamps.start ? (
+        {activity.timestamps?.start ? (
           <AlertDescription className='text-nowrap text-xs text-muted-foreground'>
             <ElapsedTime unixTimestamp={activity.timestamps.start} />
           </AlertDescription>

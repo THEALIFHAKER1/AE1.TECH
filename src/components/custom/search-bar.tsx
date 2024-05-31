@@ -64,7 +64,7 @@ export function SearchBar({ placeholder }: SearchBarProps) {
                   {...field}
                   type='text'
                   aria-label={placeholder}
-                  value={searchTerm || ''}
+                  value={searchTerm ?? ''}
                   className=' w-full rounded-lg border border-input bg-background p-4 px-2 text-sm'
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder={placeholder}

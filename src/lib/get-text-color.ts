@@ -1,6 +1,6 @@
 export const getTextColor = (background?: string): string => {
   // Use a default background color if none is provided
-  background = background || '#ffffff'; // White in hex
+  background = background ?? '#ffffff'; // White in hex
 
   // Validate the provided background color using a regular expression
   if (!/#[0-9a-fA-F]{6}/.test(background)) {

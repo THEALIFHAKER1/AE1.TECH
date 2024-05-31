@@ -150,16 +150,13 @@ interface RepositoryTypes {
     triage: boolean;
     pull: boolean;
   };
-  languages: {
-    [key: string]: number;
-  };
+  languages: Record<string, number>;
 }
 
-export type LanguagesColorTypes = {
-  [key: string]: string;
-};
+export type LanguagesColorTypes = Record<string, string>;
 
 export type RepositoryOptionTypes = {
+  pagination: boolean;
   search: boolean;
 };
 
