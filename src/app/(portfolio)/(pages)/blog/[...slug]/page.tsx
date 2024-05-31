@@ -6,6 +6,9 @@ import "@/styles/mdx.css";
 import { type Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "../tag";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 interface PostPageProps {
   params: {
@@ -73,16 +76,35 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
-      <h1 className="mb-2">{post.title}</h1>
+    <>
+      <div className="flex w-full items-center justify-between align-middle ">
+        <div className="grid pt-4">
+          <span className="text-3xl font-bold md:text-6xl text-wrap w-3/4">
+            {post.title}
+          </span>
+          {post.description && (
+            <span className="text-sm font-light md:text-lg text-muted-foreground mt-5">
+              {post.description}
+            </span>
+          )}
+        </div>
+        <Link href="/blog" className="group flex flex-row items-center ">
+          <Button className="space-x-1 bg-foreground p-5 text-background">
+            <ArrowLeft
+              size={16}
+              className="duration-200 group-hover:-translate-x-1 "
+            />
+            <span>Back</span>
+          </Button>
+        </Link>
+      </div>
       <div className="flex gap-2 mb-2">
         {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
       </div>
-      {post.description ? (
-        <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
-      ) : null}
       <hr className="my-4" />
-      <MDXContent code={post.body} />
-    </article>
+      <div className="prose dark:prose-invert">
+        <MDXContent code={post.body} />
+      </div>
+    </>
   );
 }
