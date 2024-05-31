@@ -6,7 +6,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import remarkGfm from 'remark-gfm';
 import remarkEmoji from 'remark-emoji';
-import '@/style/github-markdown.css';
+import '@/styles/github-markdown.css';
 export default async function ReadmeProject({ readme }: { readme: string }) {
   const result = await unified()
     .use(remarkParse)
