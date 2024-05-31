@@ -15,39 +15,28 @@ export default function Activities({ activities, spotify }: ProfileData) {
         </Alert>
       ) : (
         <>
-          {activities?.map((activity, index) => {
-            return (
-              activity.name !== 'Custom Status' && (
-                <Alert key={index}>
-                  <AlertDescription>
-                    <DiscordActivityCard
-                      activity={activity}
-                      spotify={spotify}
-                    />
-                  </AlertDescription>
-                </Alert>
-              )
-            );
-          })}
+          { activities.length === 1 && activities[0]?.name === 'Custom Status' ? (
+            <Alert className=''>
+              <AlertDescription>No activities currently.</AlertDescription>
+            </Alert>
+          ) : (
+            activities?.map((activity, index) => {
+              return (
+                activity.name !== 'Custom Status' && (
+                  <Alert key={index}>
+                    <AlertDescription>
+                      <DiscordActivityCard
+                        activity={activity}
+                        spotify={spotify}
+                      />
+                    </AlertDescription>
+                  </Alert>
+                )
+              );
+            })
+          )}
         </>
       )}
     </div>
   );
-}
-{
-  /* {activities.map((activity, index) => {
-        return (
-          <div key={index} className='flex flex-col justify-center'>
-            <div className='flex items-center gap-1'>
-              {activity.emoji ? <span>{activity.emoji.name}</span> : null}
-              <span className='text-sm'>{activity.name}</span>
-            </div>
-            {activity.details ? (
-              <p className='text-xs text-muted-foreground'>
-                {activity.details}
-              </p>
-            ) : null}
-          </div>
-        );
-      })} */
 }
