@@ -1,4 +1,4 @@
-import { SiteTypes } from '@/types';
+import { type SiteTypes } from '@/types';
 
 import { env } from '@/env.mjs';
 

@@ -1,5 +1,5 @@
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { DiscordTypes } from '@/types';
+import { type DiscordTypes } from '@/types';
 import DiscordActivityCard from './discord-activity-card';
 
 interface ProfileData {

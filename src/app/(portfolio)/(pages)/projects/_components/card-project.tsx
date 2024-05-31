@@ -1,4 +1,4 @@
-import { RepositoryTypes } from '@/types';
+import { type RepositoryTypes } from '@/types';
 import {
   Card,
   CardHeader,

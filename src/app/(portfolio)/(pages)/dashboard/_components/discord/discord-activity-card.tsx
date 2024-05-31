@@ -1,4 +1,4 @@
-import { DiscordTypes } from '@/types';
+import { type DiscordTypes } from '@/types';
 import {
   TooltipProvider,
   Tooltip,

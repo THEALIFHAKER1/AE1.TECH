@@ -1,4 +1,4 @@
-import { TimeZoneFormatterTypes } from '@/types';
+import { type TimeZoneFormatterTypes } from '@/types';
 
 export const timeZoneFormatterConfig: TimeZoneFormatterTypes =
   new Intl.DateTimeFormat('en-US', {

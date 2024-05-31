@@ -1,4 +1,4 @@
-import { RepositoryTypes } from '@/types';
+import { type RepositoryTypes } from '@/types';
 import CardProject from './card-project';
 import { SearchBar } from '@/components/custom/search-bar';
 import { RepositoryOptionConfig } from '@/config/repository-option';

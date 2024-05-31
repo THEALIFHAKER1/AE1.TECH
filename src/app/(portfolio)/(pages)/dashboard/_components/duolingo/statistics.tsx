@@ -1,5 +1,5 @@
 import { duolingoIcons } from '@/components/icons/icons';
-import { DuolingoTypes } from '@/types';
+import { type DuolingoTypes } from '@/types';
 import Image from 'next/image';
 
 interface StatisticsProps {

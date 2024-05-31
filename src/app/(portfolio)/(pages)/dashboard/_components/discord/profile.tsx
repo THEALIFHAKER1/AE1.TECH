@@ -1,4 +1,4 @@
-import { DiscordTypes } from '@/types';
+import { type DiscordTypes } from '@/types';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Icons } from '@/components/icons/icons';
 

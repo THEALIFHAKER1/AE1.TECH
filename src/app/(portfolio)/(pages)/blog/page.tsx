@@ -1,6 +1,6 @@
 import CollapseComponents from '@/components/custom/collapse-components';
 import { HeadingText } from '@/components/custom/heading-text';
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import AllBlogs from './_components/all-blogs';
 import PinnedBlogs from './_components/pinned-blogs';
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'A blog about web development and programming',
 };
 
-const POSTS_PER_PAGE = 5;
+// const POSTS_PER_PAGE = 5;
 
 interface BlogPageProps {
   searchParams: {
@@ -18,9 +18,11 @@ interface BlogPageProps {
   };
 }
 
-export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const currentPage = Number(searchParams?.page) || 1;
-  const searchTerm = searchParams?.Search || '';
+export default async function BlogPage({ 
+  // searchParams
+ }: BlogPageProps) {
+  // const currentPage = Number(searchParams?.page) || 1;
+  // const searchTerm = searchParams?.Search || '';
 
   return (
     <>

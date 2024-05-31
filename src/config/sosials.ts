@@ -1,5 +1,5 @@
 import { Icons } from '@/components/icons/icons';
-import { SosialsTypes } from '@/types';
+import { type SosialsTypes } from '@/types';
 
 export const socialsConfig: SosialsTypes[] = [
   {

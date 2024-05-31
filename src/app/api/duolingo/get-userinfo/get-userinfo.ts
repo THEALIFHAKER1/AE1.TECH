@@ -1,5 +1,5 @@
 const Duolingo = require('duolingo');
-import { DuolingoTypes } from '@/types';
+import { type DuolingoTypes } from '@/types';
 
 export async function getUserInfo(): Promise<DuolingoTypes> {
   try {

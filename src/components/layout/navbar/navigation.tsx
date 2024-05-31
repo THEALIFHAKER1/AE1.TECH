@@ -4,20 +4,6 @@ import React, { useMemo } from 'react';
 import { usePathname as Pathname } from 'next/navigation';
 import { routeConfig } from '@/config/route';
 
-const pages = [
-  {
-    path: '/',
-    label: 'Home',
-  },
-  {
-    path: '/order',
-    label: 'Order',
-  },
-  {
-    path: '/payment',
-    label: 'Payment',
-  },
-];
 function Navigation() {
   const pathname = Pathname();
 

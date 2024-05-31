@@ -1,5 +1,5 @@
 import { Icons } from '@/components/icons/icons';
-import { SkillsTypes } from '@/types';
+import { type SkillsTypes } from '@/types';
 
 export const skillsConfig: SkillsTypes[] = [
   {

@@ -1,5 +1,4 @@
 import { env } from '@/env.mjs';
-import { NextResponse } from 'next/server';
 
 const GITHUB_TOKEN = env.GITHUB_TOKEN;
 

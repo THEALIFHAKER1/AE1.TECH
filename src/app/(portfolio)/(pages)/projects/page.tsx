@@ -4,7 +4,7 @@ import CollapseComponents from '@/components/custom/collapse-components';
 import AllProjects from './_components/all-projects';
 import ProjectsCarousel from './_components/spotlight-projects';
 import { getRepositories } from '@/app/api/github/get-repositories/get-repositories';
-import { RepositoryTypes } from '@/types';
+import { type RepositoryTypes } from '@/types';
 
 export const metadata = {
   title: 'Projects',

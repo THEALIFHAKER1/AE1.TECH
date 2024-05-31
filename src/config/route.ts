@@ -1,5 +1,5 @@
 import { Icons } from '@/components/icons/icons';
-import { RouteTypes } from '@/types';
+import { type RouteTypes } from '@/types';
 
 export const routeConfig: RouteTypes[] = [
   {

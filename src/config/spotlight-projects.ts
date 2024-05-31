@@ -1,5 +1,4 @@
-import { Icons } from '@/components/icons/icons';
-import { SpotlightProjectsTypes } from '@/types';
+import { type SpotlightProjectsTypes } from '@/types';
 
 export const spotlightProjectsConfig: SpotlightProjectsTypes[] = [
   {

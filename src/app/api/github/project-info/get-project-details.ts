@@ -1,5 +1,5 @@
 import { env } from '@/env.mjs';
-import { RepositoryTypes } from '@/types';
+import { type RepositoryTypes } from '@/types';
 const token = env.GITHUB_TOKEN;
 
 export async function getProjectDetails(

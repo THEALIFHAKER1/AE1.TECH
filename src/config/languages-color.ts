@@ -1,4 +1,4 @@
-import { LanguagesColorTypes } from '@/types';
+import { type LanguagesColorTypes } from '@/types';
 
 export const LanguagesColorConfig: LanguagesColorTypes = {
   ABAP: '#E8274B',

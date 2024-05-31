@@ -25,7 +25,7 @@ self.addEventListener("fetch", (event) => {
 async function handleFetch(event: FetchEvent) {
   const preloadPromise = self.registration.navigationPreload?.enable()
 
-  if (preloadPromise) {
+  if (preloadPromise !== undefined) {
     event.waitUntil(preloadPromise)
   }
 

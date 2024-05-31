@@ -1,5 +1,5 @@
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { DuolingoTypes } from '@/types';
+import { type DuolingoTypes } from '@/types';
 import Image from 'next/image';
 import {
   Dialog,
