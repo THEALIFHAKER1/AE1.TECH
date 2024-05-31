@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import { Inter as FontSans } from "next/font/google"
-import '@/style/globals.css';
-import { ThemeProvider } from '@/components/provider/theme-provider';
-import { siteConfig } from '@/config/site';
-import Navbar from '@/components/layout/navbar/navbar';
-import Footer from '@/components/layout/footer/footer';
-import WrapperPage from '../components/layout/wrapper/wrapper-page';
-import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@🧱/provider/theme-provider';
+import { siteConfig } from '@📦/site';
+import Navbar from '@🧱/layout/navbar/navbar';
+import Footer from '@🧱/layout/footer/footer';
+import WrapperPage from '@🧱/layout/wrapper/wrapper-page';
+import { cn } from '@🛠️/utils';
+import '@💅/globals.css';
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
+
 export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',

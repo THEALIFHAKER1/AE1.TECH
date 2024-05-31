@@ -26,7 +26,14 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@💅/*": ["./src/styles/*"],
+      "@🧱/*": ["./src/components/*"],
+      "@📸/*": ["./src/assets/*"],
+      "@📦/*": ["./src/config/*"],
+      "@⚙️/*": ["./src/types/*"],
+      "@📃/*": ["./src/mdx/*"],
+      "@🛠️/*": ["./src/lib/*"],
     }
   },
   "types": ["@serwist/next/typings"],

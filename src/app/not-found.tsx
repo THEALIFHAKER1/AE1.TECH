@@ -2,7 +2,7 @@ import Link from 'next/link';
 import localFont from 'next/font/local';
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons/icons';
-import '@/style/not-found.css';
+import '@💅/not-found.css';
 const myFont = localFont({
   src: '../assets/fonts/cyborg-punk.ttf',
   display: 'swap',
