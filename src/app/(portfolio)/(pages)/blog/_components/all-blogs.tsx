@@ -1,5 +1,5 @@
 import { SearchBar } from "@/components/custom/search-bar";
-import { PostItem } from "../post-item";
+import { PostItem } from "./post-item";
 
 interface AllBlogsProps {
   blogs: Array<{

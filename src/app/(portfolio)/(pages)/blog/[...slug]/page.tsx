@@ -1,15 +1,15 @@
 import { posts } from "@📃/blog";
-import { MDXContent } from "../mdx-components";
+import { MDXContent } from "../_components/mdx-components";
 import { notFound } from "next/navigation";
 
 import "@/styles/mdx.css";
 import { type Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { Tag } from "../tag";
+import { Tag } from "../_components/tag";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-
+import Image from "next/image";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -79,7 +79,7 @@ export default async function PostPage({ params }: PostPageProps) {
     <>
       <div className="flex w-full items-center justify-between align-middle ">
         <div className="grid pt-4">
-          <span className="text-3xl font-bold md:text-6xl text-wrap w-3/4">
+          <span className="text-3xl font-bold md:text-6xl text-wrap mr-9">
             {post.title}
           </span>
           {post.description && (
@@ -101,8 +101,18 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="flex gap-2 mb-2">
         {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
       </div>
-      <hr className="my-4" />
-      <div className="prose dark:prose-invert">
+      <div className="w-full relative h-full">
+        {post.banner && (
+          <Image
+            fill
+            src={post.banner}
+            alt="alt"
+            className="rounded-md object-contain "
+          />
+        )}
+      </div>
+
+      <div className="prose dark:prose-invert !max-w-screen-2xl">
         <MDXContent code={post.body} />
       </div>
     </>
