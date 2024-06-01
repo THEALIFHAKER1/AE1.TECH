@@ -1,5 +1,6 @@
 import { SearchBar } from "@/components/custom/search-bar";
 import { PostItem } from "./post-item";
+import { QueryPagination } from "../../../../../components/custom/query-pagination";
 
 interface AllBlogsProps {
   blogs: Array<{
@@ -10,8 +11,9 @@ interface AllBlogsProps {
     description?: string;
     tags?: string[];
   }>;
+  totalPages: number;
 }
-export default function AllBlogs({ blogs }: AllBlogsProps) {
+export default function AllBlogs({ blogs, totalPages }: AllBlogsProps) {
   return (
     <div className="space-y-4">
       <SearchBar placeholder={"Search for a blog"} />
@@ -37,6 +39,7 @@ export default function AllBlogs({ blogs }: AllBlogsProps) {
           <p>Nothing to see here yet</p>
         )}
       </div>
+      <QueryPagination totalPages={totalPages} />
     </div>
   );
 }
