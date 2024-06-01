@@ -33,7 +33,10 @@ export async function generateMetadata({
   }
 
   const ogSearchParams = new URLSearchParams();
+  ogSearchParams.set("type", "blog");
   ogSearchParams.set("title", post.title);
+  ogSearchParams.set("link", post.slug);
+  ogSearchParams.set("banner", post.banner ?? "");
 
   return {
     title: post.title,
