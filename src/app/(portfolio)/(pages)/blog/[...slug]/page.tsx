@@ -101,13 +101,13 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="flex gap-2 mb-2">
         {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
       </div>
-      <div className="w-full relative h-full">
+      <div className="w-full relative h-[35rem] max-w-screen-lg mx-auto">
         {post.banner && (
           <Image
             fill
             src={post.banner}
             alt="alt"
-            className="rounded-md object-contain "
+            className="rounded-xl border-2 border-white object-cover bg-center"
           />
         )}
       </div>
