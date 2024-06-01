@@ -77,26 +77,30 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <>
-      <div className="flex w-full items-center justify-between align-middle ">
-        <div className="grid pt-4">
-          <span className="text-3xl font-bold md:text-6xl text-wrap mr-9">
-            {post.title}
-          </span>
+      <div>
+        <div className="flex w-full items-center justify-between align-middle ">
+          <div className="">
+            <span className="text-3xl font-bold md:text-6xl text-wrap mr-9">
+              {post.title}
+            </span>
+          </div>
+          <Link href="/blog" className="group flex flex-row items-center ">
+            <Button className="space-x-1 bg-foreground p-5 text-background">
+              <ArrowLeft
+                size={16}
+                className="duration-200 group-hover:-translate-x-1 "
+              />
+              <span>Back</span>
+            </Button>
+          </Link>
+        </div>
+        <div>
           {post.description && (
             <span className="text-sm font-light md:text-lg text-muted-foreground mt-5">
               {post.description}
             </span>
           )}
         </div>
-        <Link href="/blog" className="group flex flex-row items-center ">
-          <Button className="space-x-1 bg-foreground p-5 text-background">
-            <ArrowLeft
-              size={16}
-              className="duration-200 group-hover:-translate-x-1 "
-            />
-            <span>Back</span>
-          </Button>
-        </Link>
       </div>
       <div className="flex gap-2 mb-2">
         {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
