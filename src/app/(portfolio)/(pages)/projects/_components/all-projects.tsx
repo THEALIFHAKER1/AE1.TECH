@@ -2,13 +2,13 @@ import { type RepositoryTypes } from "@/types";
 import CardProject from "./card-project";
 import { SearchBar } from "@/components/custom/search-bar";
 import { RepositoryOptionConfig } from "@/config/repository-option";
-import { QueryPagination } from "@/components/custom/query-pagination";
+// import { QueryPagination } from "@/components/custom/query-pagination";
 export default function AllProjects({
   repository,
-  totalPages,
+  // totalPages,
 }: {
   repository: RepositoryTypes[];
-  totalPages: number;
+  // totalPages: number;
 }) {
   const isSearch = RepositoryOptionConfig.search;
   return (
@@ -19,7 +19,7 @@ export default function AllProjects({
           <CardProject repo={repo} key={repo.id} />
         ))}
       </div>
-      <QueryPagination totalPages={totalPages} />
+      {/* <QueryPagination totalPages={totalPages} /> */}
     </div>
   );
 }

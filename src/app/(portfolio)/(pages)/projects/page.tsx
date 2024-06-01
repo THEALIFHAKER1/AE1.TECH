@@ -11,31 +11,31 @@ export const metadata = {
   description: "All my projects",
 };
 
-const POSTS_PER_PAGE = 6;
+// const POSTS_PER_PAGE = 6;
 
 export default async function ProjectPage({
   searchParams,
 }: {
   searchParams?: {
-    page?: string;
+    // page?: string;
     Search?: string;
   };
 }) {
   const searchTerm = searchParams?.Search ?? "";
-  const currentPage = Number(searchParams?.page) || 1;
+  // const currentPage = Number(searchParams?.page) || 1;
 
   const repositories = (await getRepositories()) as RepositoryTypes[];
-  const sortedRepositories = [...repositories, ...repositories].filter(
+  const sortedRepositories = repositories.filter(
     (repo) =>
       repo.name.toLowerCase().includes(searchTerm?.toLowerCase()) ||
       repo.description?.toLowerCase().includes(searchTerm?.toLowerCase())
   );
 
-  const totalPages = Math.ceil(sortedRepositories.length / POSTS_PER_PAGE);
-  const displayRepositories = sortedRepositories.slice(
-    POSTS_PER_PAGE * (currentPage - 1),
-    POSTS_PER_PAGE * currentPage
-  );
+  // const totalPages = Math.ceil(sortedRepositories.length / POSTS_PER_PAGE);
+  // const displayRepositories = sortedRepositories.slice(
+  //   POSTS_PER_PAGE * (currentPage - 1),
+  //   POSTS_PER_PAGE * currentPage
+  // );
   return (
     <>
       <CollapseComponents
@@ -54,8 +54,8 @@ export default async function ProjectPage({
         }
         contentComponent={
           <AllProjects
-            repository={displayRepositories}
-            totalPages={totalPages}
+            repository={sortedRepositories}
+            // totalPages={totalPages}
           />
         }
       />
