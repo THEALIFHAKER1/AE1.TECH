@@ -20,4 +20,5 @@ export const env = createEnv({
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
     NEXT_PUBLIC_APP_DISCORD_ID: process.env.NEXT_PUBLIC_APP_DISCORD_ID,
   },
+  emptyStringAsUndefined: true,
 });
