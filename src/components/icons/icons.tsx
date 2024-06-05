@@ -30,7 +30,7 @@ import {
   FaReact,
   FaYoutube,
 } from "react-icons/fa";
-import { FaCodeFork, FaXTwitter } from "react-icons/fa6";
+import { FaCodeFork, FaScrewdriverWrench, FaXTwitter } from "react-icons/fa6";
 import { BiLinkExternal, BiLogoTailwindCss } from "react-icons/bi";
 
 export type IconKeys = keyof typeof icons;
@@ -40,6 +40,8 @@ type IconsType = {
 };
 
 const icons = {
+  // maintenance
+  maintenance: FaScrewdriverWrench,
   logo: PencilRuler,
   sun: SunMedium,
   moon: Moon,

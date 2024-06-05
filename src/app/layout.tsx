@@ -1,23 +1,25 @@
-import type { Metadata } from 'next';
-import { Inter as FontSans } from "next/font/google"
-import { ThemeProvider } from '@🧱/provider/theme-provider';
-import { siteConfig } from '@📦/site';
-import Navbar from '@🧱/layout/navbar/navbar';
-import Footer from '@🧱/layout/footer/footer';
-import WrapperPage from '@🧱/layout/wrapper/wrapper-page';
-import { cn } from '@🛠️/utils';
-import '@💅/globals.css';
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
+import { ThemeProvider } from "@🧱/provider/theme-provider";
+import { siteConfig } from "@📦/site";
+import Navbar from "@🧱/layout/navbar/navbar";
+import Footer from "@🧱/layout/footer/footer";
+import WrapperPage from "@🧱/layout/wrapper/wrapper-page";
+import { cn } from "@🛠️/utils";
+import "@💅/globals.css";
+import Maintenance from "./Maintenance";
+import { env } from "@/env.mjs";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
-  manifest: '/manifest.json',
+  manifest: "/manifest.json",
   metadataBase: new URL(siteConfig.url.base),
   title: {
     default: siteConfig.name,
@@ -32,8 +34,8 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: siteConfig.url.base,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -53,17 +55,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: '@THEALIFHAKER1',
+    creator: "@THEALIFHAKER1",
   },
 };
 
@@ -72,10 +74,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isMaintenance = env.IS_MAINTENANCE === "true";
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(`
+        className={cn(
+          `
           h-dvh 
           select-none 
           overscroll-none 
@@ -83,22 +87,22 @@ export default function RootLayout({
           antialiased
           selection:bg-foreground
           selection:text-background
-          font-sans`,  fontSans.variable
-        ) }
+          font-sans`,
+          fontSans.variable
+        )}
       >
         <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
+          attribute="class"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Navbar /> */}
-          <WrapperPage
-            navbar={<Navbar />}
-            footer={<Footer />}
-          >
-            <main
-              className={`
+          {isMaintenance ? (
+            <Maintenance />
+          ) : (
+            <WrapperPage navbar={<Navbar />} footer={<Footer />}>
+              <main
+                className={`
                 border-forground
                 mx-auto
                 h-full
@@ -107,11 +111,11 @@ export default function RootLayout({
                 overflow-auto
                 py-20
                 `}
-            >
-              {children}
-            </main>
-          </WrapperPage>
-          {/* <Footer /> */}
+              >
+                {children}
+              </main>
+            </WrapperPage>
+          )}
         </ThemeProvider>
       </body>
     </html>
