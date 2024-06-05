@@ -9,6 +9,7 @@ import { cn } from "@🛠️/utils";
 import "@💅/globals.css";
 import Maintenance from "./Maintenance";
 import { env } from "@/env.mjs";
+import ScreenSizeDetector from "./ScreenSizeDetector";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const isMaintenance = env.IS_MAINTENANCE === "true";
+  const isDev = env.NODE_ENV === "development";
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -116,6 +118,7 @@ export default function RootLayout({
               </main>
             </WrapperPage>
           )}
+          {isDev && <ScreenSizeDetector />}
         </ThemeProvider>
       </body>
     </html>
