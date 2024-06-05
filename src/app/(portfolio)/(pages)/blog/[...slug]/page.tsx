@@ -8,8 +8,8 @@ import { siteConfig } from "@/config/site";
 import { Tag } from "../_components/tag";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import { Icons } from "@/components/icons/icons";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -89,7 +89,7 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
           <Link href="/blog" className="group flex flex-row items-center ">
             <Button className="space-x-1 bg-foreground p-5 text-background">
-              <ArrowLeft
+              <Icons.open
                 size={16}
                 className="duration-200 group-hover:-translate-x-1 "
               />
