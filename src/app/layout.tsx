@@ -99,6 +99,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {isDev && <ScreenSizeDetector />}
           {isMaintenance ? (
             <Maintenance />
           ) : (
@@ -118,7 +119,6 @@ export default function RootLayout({
               </main>
             </WrapperPage>
           )}
-          {isDev && <ScreenSizeDetector />}
         </ThemeProvider>
       </body>
     </html>
