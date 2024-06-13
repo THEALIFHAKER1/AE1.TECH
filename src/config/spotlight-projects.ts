@@ -2,11 +2,11 @@ import { type SpotlightProjectsTypes } from '@/types';
 
 export const spotlightProjectsConfig: SpotlightProjectsTypes[] = [
   {
-    projectName: 'Project 1',
-    description: 'Description of project 1',
-    repo: 'https://github.com',
-    image: 'https://via.placeholder.com/150',
-    link: '',
+    projectName: 'METEO',
+    description: 'Real-time weather app build with Next.js 14, Typescript and Shadcn UI. That gives you all the weather information you need',
+    repo: 'https://github.com/THEALIFHAKER1/METEO',
+    image: 'https://github.com/THEALIFHAKER1/METEO/blob/master/public/preview.png',
+    link: 'https://meteo.ae1.tech/',
   },
   {
     projectName: 'Project 2',
