@@ -1,11 +1,10 @@
-export const getTextColor = (background?: string): string => {
-  // Use a default background color if none is provided
-  background = background ?? '#ffffff'; // White in hex
-
+export const getTextColor = (background: string, language: string): string => {
   // Validate the provided background color using a regular expression
   if (!/#[0-9a-fA-F]{6}/.test(background)) {
-    console.warn(`Invalid background color format: ${background}. Using default white.`);
-    background = '#ffffff';
+    console.warn(
+      `Invalid background color format: ${language}. Using default white.`
+    );
+    background = "#ffffff";
   }
 
   // Efficiently convert hex to RGB using bitwise operations (assuming 8-bit channels)
