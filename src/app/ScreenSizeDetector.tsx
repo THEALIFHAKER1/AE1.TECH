@@ -7,7 +7,7 @@ export default function ScreenSizeDetector() {
       // make this div on the top of everything
       style={{ zIndex: 1000 }}
     >
-      <div className="h-6 w-8 rounded-r-md bg-yellow-300 flex justify-center items-center text-black font-bold text-xs p-1">
+      <div className="h-6 w-fit rounded-r-md bg-yellow-300 flex justify-center items-center text-black font-bold text-xs p-1">
         <span className="4xl:hidden 3xl:hidden 2xl:block xl:hidden lg:hidden md:hidden sm:hidden xs:hidden hidden">
           2XL
         </span>
@@ -25,6 +25,9 @@ export default function ScreenSizeDetector() {
         </span>
         <span className="4xl:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:hidden xs:block hidden">
           xs
+        </span>
+        <span className="4xl:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:hidden xs:hidden block">
+          below xs
         </span>
       </div>
     </div>
