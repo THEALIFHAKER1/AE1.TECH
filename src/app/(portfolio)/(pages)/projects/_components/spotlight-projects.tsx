@@ -1,15 +1,15 @@
-'use client';
-import { Icons } from '@/components/icons/icons';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+"use client";
+import { Icons } from "@/components/icons/icons";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
-import { spotlightProjectsConfig } from '@/config/spotlight-projects';
-import Autoplay from 'embla-carousel-autoplay';
-import Link from 'next/link';
+} from "@/components/ui/carousel";
+import { spotlightProjectsConfig } from "@/config/spotlight-projects";
+import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 export default function SpotlightProjects() {
   return (
@@ -22,7 +22,7 @@ export default function SpotlightProjects() {
           }),
         ]}
         opts={{
-          align: 'start',
+          align: "start",
           loop: true,
         }}
       >
@@ -32,27 +32,29 @@ export default function SpotlightProjects() {
               <div className={`p-1`}>
                 <Card className={`h-60`}>
                   <CardContent
-                    className=' flex h-full justify-end rounded-lg bg-foreground/20 bg-cover bg-center bg-no-repeat p-6 backdrop-blur-md'
+                    className=" flex h-full justify-end rounded-lg bg-foreground/20 bg-cover bg-center bg-no-repeat p-6 backdrop-blur-md"
                     style={{
                       backgroundImage: `url(${project.image})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
                     }}
                   >
-                    <CarouselItem className='flex flex-col justify-end '>
-                      <span className={`text-2xl font-bold `}>
+                    <CarouselItem className="flex flex-col justify-end ">
+                      <span className={`text-2xl font-bold text-white `}>
                         {project.projectName}
                       </span>
-                      <span className={`text-1xl `}>{project.description}</span>
-                      <div className='my-5 flex space-x-2 md:mb-0'>
-                        <Link href={project.link} target='_blank'>
-                          <Button variant='outline' size={'icon'}>
+                      <span className={`text-1xl text-white`}>
+                        {project.description}
+                      </span>
+                      <div className="my-5 flex space-x-2 md:mb-0">
+                        <Link href={project.link} target="_blank">
+                          <Button variant="outline" size={"icon"}>
                             <Icons.externalLink />
                           </Button>
                         </Link>
-                        <Link href={project.repo} target='_blank'>
-                          <Button variant='outline' size={'icon'}>
+                        <Link href={project.repo} target="_blank">
+                          <Button variant="outline" size={"icon"}>
                             <Icons.github />
                           </Button>
                         </Link>
